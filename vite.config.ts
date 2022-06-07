@@ -14,6 +14,7 @@ import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -69,6 +70,11 @@ export default defineConfig({
       extensions: ['vue', 'md'],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
+      resolvers: [
+        IconsResolver({
+          componentPrefix: '',
+        }),
+      ],
     }),
 
     Unocss(),

@@ -5,8 +5,13 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Background: typeof import('./components/Background.vue')['default']
+    Galaxy: typeof import('./components/Galaxy.vue')['default']
+    NavBar: typeof import('./components/NavBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SolarSystem: typeof import('./components/SolarSystem.vue')['default']
+    ToggleTheme: typeof import('./components/ToggleTheme.vue')['default']
   }
 }
 

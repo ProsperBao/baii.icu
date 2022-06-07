@@ -10,17 +10,9 @@ const localeIndex = computed(() => {
   })
   return res
 })
-
-const toggleLocales = () => {
-  const locales = availableLocales
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
-}
 </script>
 
 <template>
   <!-- <div>1</div> -->
   <component :is="localeIndex" />
-  <button @click="toggleLocales">
-    next language
-  </button>
 </template>
