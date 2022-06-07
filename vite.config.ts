@@ -1,4 +1,6 @@
-import path from 'path'
+import path, { resolve } from 'path'
+import fs from 'fs-extra'
+import matter from 'gray-matter'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
@@ -30,6 +32,18 @@ export default defineConfig({
 
     Pages({
       extensions: ['vue', 'md'],
+      pagesDir: ['pages', 'src/pages'],
+      extendRoute(route) {
+        const path = resolve(__dirname, route.component.slice(1))
+
+        if (!path.includes('projects.md')) {
+          const md = fs.readFileSync(path, 'utf-8')
+          const { data } = matter(md)
+          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+        }
+
+        return route
+      },
     }),
 
     Layouts(),
