@@ -37,7 +37,7 @@ export default defineConfig({
       extendRoute(route) {
         const path = resolve(__dirname, route.component.slice(1))
 
-        if (!path.includes('projects.md')) {
+        if (!path.includes('projects-')) {
           const md = fs.readFileSync(path, 'utf-8')
           const { data } = matter(md)
           route.meta = Object.assign(route.meta || {}, { frontmatter: data })
