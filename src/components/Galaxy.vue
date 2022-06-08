@@ -9,7 +9,7 @@ const el = ref<HTMLCanvasElement | null>(null)
 if (isClient) {
   onMounted(() => {
     if (el.value) {
-      starfield = new StarField(Math.floor(window.innerWidth / 2), el.value)
+      starfield = new StarField(Math.floor(window.innerWidth / 3), el.value)
       starfield.startRenderLoop()
     }
   })
@@ -22,7 +22,7 @@ if (isClient) {
     if (!n && starfield?.screen.every(i => i === 0)) {
       nextTick(() => {
         if (el.value) {
-          starfield = new StarField(Math.floor(window.innerWidth / 2), el.value)
+          starfield = new StarField(Math.floor(window.innerWidth / 3), el.value)
           starfield.startRenderLoop()
         }
       })

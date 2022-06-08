@@ -5,7 +5,7 @@ useHead({
     { name: 'description', content: 'FuBaooo\'s personal website' },
     {
       name: 'theme-color',
-      content: computed(() => isDark.value ? '#00aba9' : '#ffffff'),
+      content: computed(() => isDark.value ? '#175e9e' : '#ffffff'),
     },
   ],
   link: [

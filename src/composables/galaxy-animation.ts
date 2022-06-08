@@ -381,7 +381,7 @@ export class StarField {
     this.prevTime = 0
     this.deltaTime = 0.1
     this.xSpeed = 0
-    this.zSpeed = 4
+    this.zSpeed = 3
 
     this.mouseX = 0
     this.mouseY = (canvas.offsetHeight * 0.25) - 66
