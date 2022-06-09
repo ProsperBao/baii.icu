@@ -557,7 +557,7 @@ Ch and
 
 ### 解析结果
 
-```JSON
+```json
 {
   "local": "en",
   "Ch": false,
@@ -589,7 +589,7 @@ Ch and
     { "description": "LAlt", "key": 308 },
     { "description": "LCtrl", "key": 306 },
     { "description": "LShift", "key": 304 },
-    { "description": "Space", "key": 32  }
+    { "description": "Space", "key": 32 }
   ],
   "keyslist": [
     { "description": "B", "data": 98 },
@@ -604,7 +604,7 @@ Ch and
     { "description": "LAlt", "data": 308 },
     { "description": "LCtrl", "data": 306 },
     { "description": "LShift", "data": 304 },
-    { "description": "Space", "data": 32  }
+    { "description": "Space", "data": 32 }
   ],
   "configuration_options": [
     {

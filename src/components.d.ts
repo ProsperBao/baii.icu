@@ -8,6 +8,7 @@ declare module '@vue/runtime-core' {
     Background: typeof import('./components/Background.vue')['default']
     Galaxy: typeof import('./components/Galaxy.vue')['default']
     NavBar: typeof import('./components/NavBar.vue')['default']
+    Post: typeof import('./components/Post.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SolarSystem: typeof import('./components/SolarSystem.vue')['default']
