@@ -44,23 +44,32 @@ ObjectKeyPaths<typeof ref> // 'person.books.1'
 ObjectKeyPaths<typeof ref> // 'person.books[0]'
 ObjectKeyPaths<typeof ref> // 'person.books.[0]'
 ObjectKeyPaths<typeof ref> // 'person.pets.0.type'
+ObjectKeyPaths<typeof ref> // person.notExist -> never
 ```
 
 ### 解答
 
 ```typescript
-type ObjectKeyPaths<T extends object, K  = keyof T> = 
-K extends keyof T
-? T[K] extends object
-  ? T[K] extends unknown[]
-    ? `${string}`
-    : K & string | `${K & string}.${ObjectKeyPaths<T[K]>}`
-  : K & string
-: '';
+type IsNumber<T> = T extends number ? `[${T}]` | `.[${T}]` : never
+
+type ObjectKeyPaths<
+  T extends object,
+  Flag extends boolean = false,
+  K extends keyof T = keyof T
+> = K extends string | number
+? (Flag extends true ? `.${K}` | IsNumber<K>: `${K}`) | 
+  (
+    T[K] extends Record<string, any>
+      ? `${Flag extends true ? `.${K}` | IsNumber<K> : `${K}`}${ObjectKeyPaths<T[K], true>}`
+      : never
+  )
+: never;
 ```
 
 ### 拆分
 
-1. 递归根据对象的每个 `K` 然后联合
-2. 如果是对象则进一步递归
-3. 如果是数组则用字符串索引
+- 判断当前索引是否为字符串或数字
+- 如果不是则返回 `never`
+- 如果是则根据是否是第一层返回不同的结果的 `key`
+- 并且联合上 `K` 索引的值
+- 如果是对象则继续递归联合
