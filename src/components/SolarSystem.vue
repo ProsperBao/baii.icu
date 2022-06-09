@@ -17,20 +17,18 @@ if (isClient) {
     const { innerWidth, innerHeight } = window
     starVarList.value = new Array(parseInt(`${(innerWidth / 100) * 30}`))
       .fill('')
-      .map(() => `${random(0, innerWidth)}px ${random(0, innerHeight)}px 0 0 rgba(255, 255, 255, ${random(0, 1, true).toFixed(4)})`)
+      .map(() => `${random(0, innerWidth)}px ${random(0, innerHeight)}px 0 0 rgba(255, 255, 255, ${random(0, 1, true).toFixed(3)})`)
   }
   function initAsteroidsBelt() {
-    // 大方形 300px
-    // 小方形 300 - 150
-    const inMinRange = (x: number, y: number) => {
-      const [lx, ly, rx, ry] = [75, 75, 225, 225]
-      return (x <= rx && x >= lx) || (y <= ry && y >= ly)
-    }
-    for (let i = 0; i < 300; i++) {
-      const [x, y] = [random(0, 150), random(0, 150)]
-      if (!inMinRange(x, y)) { // 不在范围内
-        asteroidsVarList.value.push(`${x}px ${y}px 0 -104px rgba(255, 255, 255, ${random(0, 1, true).toFixed(4)})`)
-      }
+    for (let i = 0; i < 600; i++) {
+      const [x, y] = [random(0, 175), random(0, 175)]
+      asteroidsVarList.value.push(`${
+        random(0, 1, true) > 0.5 ? '-' : ''
+      }${x}px ${
+        random(0, 1, true) > 0.5 ? '-' : ''
+      }${y}px 0 -104px rgba(255, 255, 255, ${
+        random(0, 1, true).toFixed(3)
+      })`)
     }
   }
 }
@@ -38,7 +36,7 @@ if (isClient) {
 
 <template>
   <div class="solar-system-container">
-    <div class="solar-syst" :style="{ '--star': starVarList.join(','), '--asteroids': asteroidsVarList.join(',') }">
+    <div class="solar-syst" :style="{ '--star': starVarList.join(', '), '--asteroids': asteroidsVarList.join(', ') }">
       <div class="sun" />
       <div class="mercury" />
       <div class="venus" />

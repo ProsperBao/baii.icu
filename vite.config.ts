@@ -15,6 +15,17 @@ import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import Anchor from 'markdown-it-anchor'
+// @ts-expect-error missing types
+import TOC from 'markdown-it-table-of-contents'
+import { slugify } from './scripts/slugify'
+
+import 'prismjs/components/prism-regex'
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-yaml'
+import 'prismjs/components/prism-json'
+import 'prismjs/components/prism-markdown'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -82,15 +93,30 @@ export default defineConfig({
     Markdown({
       wrapperClasses: markdownWrapperClasses,
       headEnabled: true,
+      wrapperComponent: 'post',
+      markdownItOptions: {
+        quotes: '""\'\'',
+      },
       markdownItSetup(md) {
         // https://prismjs.com/
         md.use(Prism)
+        md.use(Anchor, {
+          slugify,
+          permalink: Anchor.permalink.linkInsideHeader({
+            symbol: '#',
+            renderAttrs: () => ({ 'aria-hidden': 'true' }),
+          }),
+        })
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
             target: '_blank',
             rel: 'noopener',
           },
+        })
+        md.use(TOC, {
+          includeLevel: [1, 2, 3],
+          slugify,
         })
       },
     }),
