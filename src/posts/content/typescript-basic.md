@@ -127,7 +127,7 @@ interface PersonClassConstructor {
 }
 
 function createPerson(ctor: PersonClassConstructor): IPerson {
-  return new ctor('user', 18)
+  return new constructor ('user', 18)
 }
 ```
 
