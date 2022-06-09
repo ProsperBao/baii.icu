@@ -29,7 +29,7 @@ const result = bindFunc(3) // result: 6
 
 ```ts
 const add = (a: number, b: number, c: number) => a + b + c
-const three = add(1, 1, 1) 
+const three = add(1, 1, 1)
 
 const curriedAdd = DynamicParamsCurrying(add)
 const six = curriedAdd(1, 2, 3)

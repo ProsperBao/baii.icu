@@ -14,7 +14,7 @@ levelTitle: Easy
 举例:
 
 ```ts
-type A = If<true, 'a', 'b'>  // expected to be 'a'
+type A = If<true, 'a', 'b'> // expected to be 'a'
 type B = If<false, 'a', 'b'> // expected to be 'b'
 ```
 

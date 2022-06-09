@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { DefineComponent } from 'vue'
 
-const { locale, availableLocales } = useI18n()
+const { locale } = useI18n()
 const localeIndex = computed(() => {
   let res: DefineComponent<{}, {}, any> | null = null
   Object.values(import.meta.globEager('~/posts/index-*.md')).forEach((i) => {

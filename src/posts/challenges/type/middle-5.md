@@ -16,20 +16,20 @@ levelTitle: Middle
 例如
 
 ```ts
-type X = { 
-  x: { 
+interface X {
+  x: {
     a: 1
     b: 'hi'
   }
   y: 'hey'
 }
 
-type Expected = { 
-  readonly x: { 
+interface Expected {
+  readonly x: {
     readonly a: 1
     readonly b: 'hi'
   }
-  readonly y: 'hey' 
+  readonly y: 'hey'
 }
 
 type Todo = DeepReadonly<X> // should be same as `Expected`

@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { isClient } from '@vueuse/core'
-import { random } from 'lodash'
+import _ from 'lodash'
 import { isDark } from '~/composables/dark'
+const { random } = _
+
 const starVarList = ref<string[]>([])
 const asteroidsVarList = ref<string[]>([])
 
 if (isClient) {
-  // const { stop } = useTimeoutFn(generateStar, 5900)
-  // useResizeObserver(document.body, generateStar)
+  const { stop } = useTimeoutFn(generateStar, 5900)
+  useResizeObserver(document.body, generateStar)
   initAsteroidsBelt()
   function generateStar() {
     if (!isDark)
