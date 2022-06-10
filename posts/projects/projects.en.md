@@ -8,7 +8,7 @@ projects:
     - name: 'ThroughMusic'
       link: 'https://github.com/FuBaooo/ThroughMusic'
       desc: 'A project imitating Netease cloud'
-      icon: 'i-carbon-earth-southeast-asia'
+      icon: 'i-carbon-continue'
   Challenge:
     - name: 'TypeChallenges'
       link: '/posts/challenges/type'
@@ -20,3 +20,5 @@ projects:
       desc: 'DST server management tools'
       icon: 'i-carbon-cloud-services'
 ---
+
+en

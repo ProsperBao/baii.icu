@@ -9,15 +9,27 @@ const toggleLocales = () => {
 <template>
   <header class="header z-40">
     <router-link
-      class="absolute lg:fixed m-6 select-none outline-none flex gap-2 items-center" to="/"
+      class="absolute lg:fixed m-4 select-none outline-none flex gap-2 items-center" to="/"
       focusable="false"
     >
-      <img class="w-5 h-5" src="/logo.svg?url" alt="logo">
-      <span text-gray-700 dark:text-gray-200>FuBaooo</span>
+      <img class="w-5 h-5 lt-sm:hidden" src="/logo.svg?url" alt="logo">
+      <span text-xl text-gray-700 dark:text-gray-200>FuBaooo</span>
     </router-link>
     <nav text-gray-700 dark:text-gray-200 class="nav">
       <div class="spacer" />
       <div class="right">
+        <router-link class="icon-btn" to="/posts" title="Blog">
+          <span class="lt-md:hidden">Blog</span>
+          <div i-carbon-notebook md:hidden />
+        </router-link>
+        <router-link class="icon-btn" to="/projects" title="Projects">
+          <span class="lt-md:hidden">Projects</span>
+          <div i-carbon-ai-results-low class="md:hidden" />
+        </router-link>
+        <router-link class="icon-btn" to="/challenges" title="Challenges">
+          <span class="lt-md:hidden">Challenges</span>
+          <div i-carbon-chart-venn-diagram class="md:hidden" />
+        </router-link>
         <ToggleTheme />
         <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
           <div i-carbon-language />
@@ -32,7 +44,7 @@ const toggleLocales = () => {
 
 <style scoped>
 .nav {
-  padding: 1.5rem;
+  padding: 1rem;
   width: 100%;
   display: grid;
   grid-template-columns: auto max-content;

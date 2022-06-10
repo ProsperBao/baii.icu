@@ -8,7 +8,7 @@ projects:
     - name: 'ThroughMusic'
       link: 'https://github.com/AcrossMountains/ThroughMusic'
       desc: '一个模仿网易云的项目'
-      icon: 'i-carbon-earth-southeast-asia'
+      icon: 'i-carbon-continue'
   挑战:
     - name: 'TypeChallenges'
       link: '/posts/challenges/type'
@@ -20,3 +20,5 @@ projects:
       desc: '一个饥荒服务器管理工具'
       icon: 'i-carbon-cloud-services'
 ---
+
+zh

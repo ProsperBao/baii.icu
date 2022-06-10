@@ -19,6 +19,7 @@ import Anchor from 'markdown-it-anchor'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './scripts/slugify'
+import { locales } from './scripts/locales'
 
 import 'prismjs/components/prism-regex'
 import 'prismjs/components/prism-javascript'
@@ -28,6 +29,8 @@ import 'prismjs/components/prism-json'
 import 'prismjs/components/prism-markdown'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+
+const localeList = locales(__dirname)
 
 export default defineConfig({
   resolve: {
@@ -44,11 +47,10 @@ export default defineConfig({
 
     Pages({
       extensions: ['vue', 'md'],
-      pagesDir: ['src/posts', 'src/pages'],
+      pagesDir: ['posts', 'src/pages'],
       extendRoute(route) {
         const path = resolve(__dirname, route.component.slice(1))
-
-        if (!path.includes('projects-')) {
+        if (!localeList.every(i => path.includes(`.${i}.md`))) {
           const md = fs.readFileSync(path, 'utf-8')
           const { data } = matter(md)
           route.meta = Object.assign(route.meta || {}, { frontmatter: data })
@@ -80,7 +82,7 @@ export default defineConfig({
     Components({
       extensions: ['vue', 'md'],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dts: 'src/components.d.ts',
+      dts: true,
       resolvers: [
         IconsResolver({
           componentPrefix: '',
@@ -98,7 +100,6 @@ export default defineConfig({
         quotes: '""\'\'',
       },
       markdownItSetup(md) {
-        // https://prismjs.com/
         md.use(Prism)
         md.use(Anchor, {
           slugify,
@@ -124,7 +125,7 @@ export default defineConfig({
     VueI18n({
       runtimeOnly: true,
       compositionOnly: true,
-      include: [path.resolve(__dirname, 'locales/**')],
+      include: [resolve(__dirname, 'locales/**')],
     }),
 
     Inspect(),

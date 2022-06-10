@@ -35,7 +35,7 @@ if (isClient) {
 </script>
 
 <template>
-  <div class="solar-system-container">
+  <div class="solar-system-container" brightness-80>
     <div class="solar-syst" :style="{ '--star': starVarList.join(', '), '--asteroids': asteroidsVarList.join(', ') }">
       <div class="sun" />
       <div class="mercury" />
