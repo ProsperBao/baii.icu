@@ -23,7 +23,7 @@ type case4 = Subtract<1000, 999> // 1
 ### 解答
 
 ```typescript
-type Tuple<T, Res extends 1[] = [], O extends boolean = false> = O extends true ? Res : Res['length'] extends T ? Res : Tuple<T, [...Res, 1]>
+type Tuple<T, Res extends 1[] = []> = 0 extends 1 ? never : Res['length'] extends T ? Res : Tuple<T, [...Res, 1]>;
 
 type Subtract<M extends number, S extends number> = Tuple<M> extends [...Tuple<S>, ...infer Rest] ? Rest['length'] : never
 ```
