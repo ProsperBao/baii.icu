@@ -1,8 +1,8 @@
 ---
 title: 项目 - FuBaooo
 display: Projects
-subtitle: 我参与的一些项目或者挑战，虽然不多
-description: 我参与的一些项目或者挑战，虽然不多
+subtitle: I participated in some projects or challenges, although not many
+description: I participated in some projects or challenges, although not many
 projects:
   进行中:
     - name: 'ThroughMusic'

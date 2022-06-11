@@ -4,14 +4,13 @@ import type { DefineComponent } from 'vue'
 const props = defineProps<{ path: string }>()
 
 const { locale } = useI18n()
-const localeIndex = computed(() => {
-  let res: DefineComponent | null = null
-  Object.values(import.meta.globEager(`${props.path}/.*/.md`)).forEach((i) => {
-    if (i.default.name === `index.${locale.value}`)
-      res = i.default
-  })
-  return res
-})
+const router = useRouter()
+const localeIndex = shallowRef<DefineComponent | null>(null)
+const pageRoute = router.getRoutes().find(i => i.path === `${props.path}.${locale.value}`)
+if (pageRoute) {
+  const component = await (pageRoute.components.default as Function)()
+  localeIndex.value = component.default
+}
 </script>
 
 <template>
