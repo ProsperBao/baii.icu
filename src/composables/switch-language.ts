@@ -1,4 +1,4 @@
-import type { ComponentOptions, DefineComponent, WritableComputedRef } from 'vue'
+import type { DefineComponent, WritableComputedRef } from 'vue'
 
 export async function useSwitchLanguage(locale: WritableComputedRef<string>) {
   const router = useRouter()
