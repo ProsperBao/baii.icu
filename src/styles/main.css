@@ -25,12 +25,14 @@ body,
 }
 
 :root {
+  --c: #222222;
   --c-bg: #fff;
   --c-scrollbar: #eee;
   --c-scrollbar-hover: #bbb;
 }
 
 html {
+  color: var(--c);
   background-color: var(--c-bg);
 }
 

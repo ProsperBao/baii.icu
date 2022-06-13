@@ -14,9 +14,9 @@ const toggleLocales = () => {
       focusable="false"
     >
       <img class="w-5 h-5 lt-sm:hidden" src="/logo.svg?url" alt="logo">
-      <span text-xl text-gray-700 dark:text-gray-200>FuBaooo</span>
+      <span text-xl dark:text-gray-200>FuBaooo</span>
     </router-link>
-    <nav text-gray-700 dark:text-gray-200 class="nav">
+    <nav dark:text-gray-200 class="nav">
       <div class="spacer" />
       <div class="right !lt-md:gap-2">
         <router-link class="icon-btn" to="/posts" title="Blog" :class="route.path === '/posts' ? '!opacity-100' : ''">
