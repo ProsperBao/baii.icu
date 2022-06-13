@@ -7,6 +7,12 @@ import '@unocss/reset/tailwind.css'
 import './styles/main.css'
 import 'uno.css'
 
+declare module 'vue-router' {
+  interface RouteMeta {
+    frontmatter: any
+  }
+}
+
 const routes = setupLayouts(generatedRoutes)
 
 // https://github.com/antfu/vite-ssg
