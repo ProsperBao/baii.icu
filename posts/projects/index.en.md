@@ -1,10 +1,14 @@
 ---
-title: Projects - Anthony Fu
+title: Projects - FuBaooo
 display: Projects
-subtitle: List of projects that I am proud of
-description: List of projects that I am proud of
+subtitle: I participated in some projects or challenges, although not many.
+description: I participated in some projects or challenges, although not many.
 projects:
   Ongoing:
+    - name: 'Baii.icu'
+      link: 'https://github.com/FuBaooo/baii.icu'
+      desc: 'this blog'
+      icon: 'i-carbon-edit'
     - name: 'ThroughMusic'
       link: 'https://github.com/FuBaooo/ThroughMusic'
       desc: 'A project imitating Netease cloud'
@@ -21,4 +25,4 @@ projects:
       icon: 'i-carbon-cloud-services'
 ---
 
-en
+<ListProjects :projects="frontmatter.projects"/>

@@ -1,10 +1,14 @@
 ---
 title: 项目 - FuBaooo
 display: Projects
-subtitle: I participated in some projects or challenges, although not many
-description: I participated in some projects or challenges, although not many
+subtitle: 我参加的一些项目或挑战，虽然不多。
+description: 我参加的一些项目或挑战，虽然不多。
 projects:
   进行中:
+    - name: 'Baii.icu'
+      link: 'https://github.com/FuBaooo/baii.icu'
+      desc: '这个博客'
+      icon: 'i-carbon-edit'
     - name: 'ThroughMusic'
       link: 'https://github.com/AcrossMountains/ThroughMusic'
       desc: '一个模仿网易云的项目'
@@ -21,4 +25,4 @@ projects:
       icon: 'i-carbon-cloud-services'
 ---
 
-zh
+<ListProjects :projects="frontmatter.projects"/>

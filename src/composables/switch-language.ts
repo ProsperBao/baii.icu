@@ -1,4 +1,4 @@
-import type { DefineComponent, WritableComputedRef } from 'vue'
+import type { ComponentOptions, DefineComponent, WritableComputedRef } from 'vue'
 
 export async function useSwitchLanguage(locale: WritableComputedRef<string>) {
   const router = useRouter()
@@ -6,10 +6,18 @@ export async function useSwitchLanguage(locale: WritableComputedRef<string>) {
   const routes = router.getRoutes()
   const component = ref<DefineComponent | null>(null)
   const loadComponent = async () => {
-    const pageRoute = routes.find(i => i.path === `${route.fullPath}/index.${locale.value.toLocaleLowerCase()}`)
+    const pageRoute = routes.find(i => i.path === `${route.fullPath === '/' ? '' : route.fullPath}/index.${locale.value.toLocaleLowerCase()}`)
     if (pageRoute) {
-      const load = await (pageRoute.components.default as Function)()
-      component.value = markRaw(load.default)
+      let load: DefineComponent | null = null
+      if (typeof (pageRoute.components.default) === 'function') {
+        load = await (pageRoute.components.default as Function)()
+        load = load!.default
+      }
+      else {
+        load = pageRoute.components.default as DefineComponent
+      }
+
+      load && (component.value = markRaw(load))
     }
   }
 
