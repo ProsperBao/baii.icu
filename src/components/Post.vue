@@ -1,7 +1,6 @@
 <script setup lang='ts'>
 const router = useRouter()
 const route = useRoute()
-console.log(route.meta)
 const content = ref<HTMLDivElement>()
 onMounted(() => {
   const navigate = () => {
