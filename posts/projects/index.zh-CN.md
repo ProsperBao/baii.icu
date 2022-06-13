@@ -15,7 +15,7 @@ projects:
       icon: 'i-carbon-continue'
   挑战:
     - name: 'TypeChallenges'
-      link: '/posts/challenges/type'
+      link: '/challenges/type'
       desc: '已经挑战完成的 Typescript 挑战'
       icon: 'i-carbon-ai-results-high'
   维护中:

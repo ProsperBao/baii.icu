@@ -15,7 +15,7 @@ projects:
       icon: 'i-carbon-continue'
   Challenge:
     - name: 'TypeChallenges'
-      link: '/posts/challenges/type'
+      link: '/challenges/type'
       desc: 'Typescript challenge completed'
       icon: 'i-carbon-ai-results-high'
   Maintenance:

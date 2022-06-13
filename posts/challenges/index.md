@@ -1,5 +1,3 @@
----
-title: Challenges
----
-
-Challenges
+<Suspense>
+  <WrapLanguage></WrapLanguage>
+</Suspense>

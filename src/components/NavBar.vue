@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const route = useRoute()
 const { t, availableLocales, locale } = useI18n()
 const toggleLocales = () => {
   const locales = availableLocales
@@ -17,17 +18,17 @@ const toggleLocales = () => {
     </router-link>
     <nav text-gray-700 dark:text-gray-200 class="nav">
       <div class="spacer" />
-      <div class="right">
-        <router-link class="icon-btn" to="/posts" title="Blog">
-          <span class="lt-md:hidden">Blog</span>
+      <div class="right !lt-md:gap-2">
+        <router-link class="icon-btn" to="/posts" title="Blog" :class="route.path === '/posts' ? '!opacity-100' : ''">
+          <span class="lt-md:hidden">{{ t('nav.blog') }}</span>
           <div i-carbon-notebook md:hidden />
         </router-link>
-        <router-link class="icon-btn" to="/projects" title="Projects">
-          <span class="lt-md:hidden">Projects</span>
+        <router-link class="icon-btn" to="/projects" title="Projects" :class="route.path === '/projects' ? '!opacity-100' : ''">
+          <span class="lt-md:hidden">{{ t('nav.projects') }}</span>
           <div i-carbon-ai-results-low class="md:hidden" />
         </router-link>
-        <router-link class="icon-btn" to="/challenges" title="Challenges">
-          <span class="lt-md:hidden">Challenges</span>
+        <router-link class="icon-btn" to="/challenges" title="Challenges" :class="route.path === '/challenges' ? '!opacity-100' : ''">
+          <span class="lt-md:hidden">{{ t('nav.challenges') }}</span>
           <div i-carbon-chart-venn-diagram class="md:hidden" />
         </router-link>
         <ToggleTheme />

@@ -10,7 +10,7 @@ defineProps<{ projects: Record<string, any[]> }>()
     <div class="project-grid py-2 -mx-3 gap-2">
       <a
         v-for="item, idx in projects[key]" :key="idx" class="item relative flex items-center" :href="item.link"
-        target="_blank" :class="!item.link ? 'opacity-0 pointer-events-none h-0 -mt-8 -mb-4' : ''" :title="item.name"
+        :target="item.link.startsWith('/') ? '' : '_blank'" :class="!item.link ? 'opacity-0 pointer-events-none h-0 -mt-8 -mb-4' : ''" :title="item.name"
       >
         <div v-if="item.icon" class="pt-2 pr-5">
           <div class="text-3xl opacity-80" :class="item.icon || 'i-carbon-unknown'" />
