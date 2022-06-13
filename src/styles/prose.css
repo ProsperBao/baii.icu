@@ -122,8 +122,15 @@ h6:focus .header-anchor {
 }
 
 .prose code::before {
-  content: "";
+  margin: 0 0.25rem;
 }
 .prose code::after {
-  content: "";
+  margin: 0 0.25rem;
+}
+
+.prose pre code::before {
+  margin: 0;
+}
+.prose pre code::after {
+  margin: 0;
 }
