@@ -1,22 +1,10 @@
 <script setup lang="ts">
-import type { DefineComponent } from 'vue'
-
-const props = defineProps<{ path: string }>()
+import { useSwitchLanguage } from '~/composables/switch-language'
 
 const { locale } = useI18n()
-const router = useRouter()
-const localeIndex = ref<DefineComponent | null>(null)
-const pickLocaleComponent = async () => {
-  const pageRoute = router.getRoutes().find(i => i.path === `${props.path}.${locale.value.toLocaleLowerCase()}`)
-  if (pageRoute) {
-    const component = await (pageRoute.components.default as Function)()
-    localeIndex.value = markRaw(component.default)
-  }
-}
-await pickLocaleComponent()
-watch(() => locale.value, pickLocaleComponent)
+const { component } = await useSwitchLanguage(locale)
 </script>
 
 <template>
-  <component :is="localeIndex" />
+  <component :is="component" />
 </template>

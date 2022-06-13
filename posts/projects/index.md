@@ -3,5 +3,5 @@ title: Projects - FuBaooo
 ---
 
 <Suspense>
-  <WrapLanguage path="/projects/projects"></WrapLanguage>
+  <WrapLanguage></WrapLanguage>
 </Suspense>
