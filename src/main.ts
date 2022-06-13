@@ -5,6 +5,7 @@ import generatedRoutes from '~pages'
 
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
+import './styles/prose.css'
 import 'uno.css'
 
 declare module 'vue-router' {
