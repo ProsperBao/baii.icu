@@ -1,5 +1,7 @@
 <script setup lang='ts'>
 const router = useRouter()
+const route = useRoute()
+console.log(route.meta)
 const content = ref<HTMLDivElement>()
 onMounted(() => {
   const navigate = () => {
@@ -51,7 +53,17 @@ onMounted(() => {
 </script>
 
 <template>
-  <article ref="content">
-    <slot />
-  </article>
+  <div>
+    <article ref="content">
+      <slot />
+    </article>
+    <div v-if="!route.meta.frontmatter.noBack" class="prose mt-8 mb-8 text-left">
+      <router-link
+        :to="route.path.split('/').slice(0, -1).join('/') || '/'"
+        class="font-mono no-underline opacity-50 hover:opacity-75"
+      >
+        cd ..
+      </router-link>
+    </div>
+  </div>
 </template>
