@@ -3,7 +3,7 @@ import type { DefineComponent, WritableComputedRef } from 'vue'
 export async function useSwitchLanguage(locale: WritableComputedRef<string>) {
   const router = useRouter()
   const route = useRoute()
-  const routes = router.getRoutes()
+  const routes = router.getRoutes().filter(i => i.name)
   const component = ref<DefineComponent | null>(null)
   const loadComponent = async () => {
     const pageRoute = routes.find(i => i.path === `${route.fullPath === '/' ? '' : route.fullPath}/index.${locale.value.toLocaleLowerCase()}`)
