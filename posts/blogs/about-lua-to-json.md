@@ -5,6 +5,7 @@ lang: zh-CN
 duration: 10min
 description: 关于小工具需要 Lua 解析成 JSON 的那些事
 ---
+
 [[toc]]
 
 ## 背景

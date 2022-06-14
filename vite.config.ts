@@ -33,7 +33,7 @@ import 'prismjs/components/prism-javadoclike'
 import 'prismjs/components/prism-javadoc'
 import 'prismjs/components/prism-jsdoc'
 
-const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+const markdownWrapperClasses = 'prose prose-sm m-auto text-left relative'
 
 const localeList = locales(__dirname)
 

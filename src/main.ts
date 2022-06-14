@@ -1,5 +1,7 @@
 import { ViteSSG } from 'vite-ssg'
 import { setupLayouts } from 'virtual:generated-layouts'
+import dayjs from 'dayjs'
+import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import App from './App.vue'
 import generatedRoutes from '~pages'
 
@@ -21,6 +23,7 @@ export const createApp = ViteSSG(
   App,
   { routes, base: import.meta.env.BASE_URL },
   (ctx) => {
+    dayjs.extend(LocalizedFormat)
     // install all modules under `modules/`
     Object.values(import.meta.globEager('./modules/*.ts')).forEach(i => i.install?.(ctx))
   },

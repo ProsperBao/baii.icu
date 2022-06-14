@@ -4,6 +4,7 @@ date: 2022-5-31 16:35:11
 lang: zh-CN
 duration: 10min
 description: Typescript 内置的高级类型。
+type: learn
 ---
 
 [[toc]]

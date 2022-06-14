@@ -4,6 +4,7 @@ date: 2022-6-06 15:21:28
 lang: zh-CN
 duration: 5min
 description: Typescript 原理
+type: learn
 ---
 
 [[toc]]

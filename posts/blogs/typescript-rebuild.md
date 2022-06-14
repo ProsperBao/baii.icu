@@ -4,6 +4,7 @@ date: 2022-6-06 19:00:28
 lang: zh-CN
 duration: 8min
 description: Typescript 重构
+type: learn
 ---
 
 [[toc]]

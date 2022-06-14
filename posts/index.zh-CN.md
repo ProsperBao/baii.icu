@@ -2,7 +2,7 @@
 title: 福宝
 ---
 
-### 福宝
+## 关于我
 
 
 我是福宝，一个专职前端开发人员，略懂一点后端 [Node.js](https://nodejs.org/zh-cn) & [Rust](https://www.rust-lang.org)。
@@ -13,5 +13,12 @@ title: 福宝
 
 我在 [这里](/posts) 也会记录一些碰到的问题，或者学习到的东西。
 
-希望以后我能把我所想的全部化为现实。
+希望以后有天能暴富。往后都会在这里记录一些东西。
 
+***
+
+你可以在 [Github](https://github.com/FuBaooo) 找到我。<br/>
+邮箱在这里 [baihe2233@gmail.com](mailto:baihe2233@gmail.com).<br />
+
+
+灵感来自于 [@antfu](https://antfu.me/)，感谢大佬的博客。<br />

@@ -19,15 +19,28 @@ const toggleLocales = () => {
     <nav dark:text-gray-200 class="nav">
       <div class="spacer" />
       <div class="right !lt-md:gap-2">
-        <router-link class="icon-btn" to="/posts" title="Blog" :class="route.path === '/posts' ? '!opacity-100' : ''">
+        <router-link class="icon-btn" to="/blogs" title="Blog" :class="route.path === '/blogs' ? '!opacity-100' : ''">
           <span class="lt-md:hidden">{{ t('nav.blog') }}</span>
           <div i-carbon-notebook md:hidden />
         </router-link>
-        <router-link class="icon-btn" to="/projects" title="Projects" :class="route.path === '/projects' ? '!opacity-100' : ''">
+        <router-link
+          class="icon-btn" to="/learns" title="Learns"
+          :class="route.path === '/learns' ? '!opacity-100' : ''"
+        >
+          <span class="lt-md:hidden">{{ t('nav.learns') }}</span>
+          <div i-carbon-microscope class="md:hidden" />
+        </router-link>
+        <router-link
+          class="icon-btn" to="/projects" title="Projects"
+          :class="route.path === '/projects' ? '!opacity-100' : ''"
+        >
           <span class="lt-md:hidden">{{ t('nav.projects') }}</span>
           <div i-carbon-ai-results-low class="md:hidden" />
         </router-link>
-        <router-link class="icon-btn" to="/challenges" title="Challenges" :class="route.path === '/challenges' ? '!opacity-100' : ''">
+        <router-link
+          class="icon-btn" to="/challenges" title="Challenges"
+          :class="route.path === '/challenges' ? '!opacity-100' : ''"
+        >
           <span class="lt-md:hidden">{{ t('nav.challenges') }}</span>
           <div i-carbon-chart-venn-diagram class="md:hidden" />
         </router-link>

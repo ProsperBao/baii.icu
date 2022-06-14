@@ -56,7 +56,7 @@ onMounted(() => {
     <article ref="content">
       <slot />
     </article>
-    <div v-if="!route.meta.frontmatter.noBack" class="prose mt-8 mb-8 text-left">
+    <div v-if="!route.meta.frontmatter.noBack" class="prose mt-8 mb-8 m-auto text-left relative">
       <router-link
         :to="route.path.split('/').slice(0, -1).join('/') || '/'"
         class="font-mono no-underline opacity-50 hover:opacity-75"

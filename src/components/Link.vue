@@ -1,10 +1,12 @@
 <script lang="ts" setup>
-defineProps<{ href: string }>()
+defineProps<{ to: string }>()
 </script>
 
 <template>
-  <a v-if="!href.startsWith('/')" target="_blank" :href="href"><slot /></a>
-  <router-link v-else :to="href">
+  <a v-if="!to.startsWith('/')" target="_blank" :href="to">
+    <slot />
+  </a>
+  <router-link v-else :to="to">
     <slot />
   </router-link>
 </template>
