@@ -2,6 +2,7 @@
 noBack: true
 ---
 
-<Suspense>
-  <WrapLanguage></WrapLanguage>
-</Suspense>
+<suspense>
+  <wrap-language></wrap-language>
+</suspense>
+

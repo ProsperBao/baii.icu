@@ -11,4 +11,4 @@ projects:
       icon: 'i-carbon-ai-results-high'
 ---
 
-<ListProjects :projects="frontmatter.projects"/>
+<list-projects :projects="frontmatter.projects"></list-projects>

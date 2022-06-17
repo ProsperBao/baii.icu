@@ -3,4 +3,4 @@ title: Blogs - FuBaooo
 noBack: true
 ---
 
-<ListBlogs />
+<list-blogs></list-blogs>

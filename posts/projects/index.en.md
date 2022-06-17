@@ -25,4 +25,4 @@ projects:
       icon: 'i-carbon-cloud-services'
 ---
 
-<ListProjects :projects="frontmatter.projects"/>
+<list-projects :projects="frontmatter.projects"></list-projects>

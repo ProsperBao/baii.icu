@@ -2,4 +2,4 @@
 title: Type Challenges - FuBaooo
 ---
 
-<ListChallenges path="/challenges/type"/>
+<list-challenges path="/challenges/type"></list-challenges>
