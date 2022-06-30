@@ -29,5 +29,5 @@ type Subtract<M extends number, S extends number> = Tuple<M> extends [...Tuple<S
 ```
 
 ### 拆分
-- 和 [Inclusive Range](/projects/challenges/typescript/extreme-7) 类似
+- 和 [Inclusive Range](/challenges/type/extreme-7) 类似
 - 利用非条件结束递归尾延长递归深度

@@ -42,4 +42,4 @@ type Unshift<T extends unknown[], V> = [V, ...T]
 ```
 
 ### 拆分
-1. 和 [最后一个元素](/projects/challenges/typescript/middle-7) 类似
+1. 和 [最后一个元素](/challenges/type/middle-7) 类似

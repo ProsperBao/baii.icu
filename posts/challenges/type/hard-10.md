@@ -71,7 +71,7 @@ declare function VueBasicProps<P, D, C, M>(options: VueOptions<P, D, C, M>): Vue
 ```
 
 ### 拆分
-* 根据 [简单的 Vue 类型](/projects/challenges/typescript/hard-3) 的基础上进行修改。
+* 根据 [简单的 Vue 类型](/challenges/type/hard-3) 的基础上进行修改。
 * 增加 `props` 的泛型 `P`。
 * 增加 `VueProps` 的泛型用于包装 `P`
 * 为了支持多个构造函数，增加 `ToUnion` 的泛型。

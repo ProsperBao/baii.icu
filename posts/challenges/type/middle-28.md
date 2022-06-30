@@ -26,6 +26,6 @@ type IsNever<T> = [T] extends [never] ? true : false
 ```
 
 ### 拆分
-1. 用到了之前的一个小技巧 [Permutation](/projects/challenges/typescript/middle-17)
+1. 用到了之前的一个小技巧 [Permutation](/challenges/type/middle-17)
 2. 如果直接用 `never extends never` 判断，则永远都是 `false`
 3. 所以需要用数组包裹看成元组类型，然后再用 `[T] extends [never]`判断

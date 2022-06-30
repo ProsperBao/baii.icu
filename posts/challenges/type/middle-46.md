@@ -31,5 +31,5 @@ type FlipArguments<T extends Function> = T extends (...args: infer P) => infer R
 
 ### 拆分
 1. 利用 `infer` 获取函数的返回值和参数
-2. 利用 [Reverse](/projects/challenges/typescript/middle-45) 写好的数组颠倒函数把参数颠倒
+2. 利用 [Reverse](/challenges/type/middle-45) 写好的数组颠倒函数把参数颠倒
 

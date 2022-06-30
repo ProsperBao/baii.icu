@@ -32,5 +32,5 @@ type RequiredKeys<T> = keyof {
 
 ### 拆分
 
-1. 和 [Get Required](/projects/challenges/typescript/hard-3) 类似
+1. 和 [Get Required](/challenges/type/hard-3) 类似
 2. 只需要对结果对象多加一个 `keyof` 获取

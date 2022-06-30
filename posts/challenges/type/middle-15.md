@@ -29,5 +29,5 @@ type ReplaceAll<S extends string, FROM extends string, TO extends string> = FROM
 ```
 
 ### 拆分
-1. 和 [Replace](/projects/challenges/typescript/middle-14) 类似
+1. 和 [Replace](/challenges/type/middle-14) 类似
 2. 需要递归调用然后替换，改动不大

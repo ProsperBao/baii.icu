@@ -27,4 +27,4 @@ type Trim<S extends string> = S extends `${' '| '\n'|'\t'}${infer L}`
 ```
 
 ### 拆分
-1. 和 [TrimLeft](/projects/challenges/typescript/middle-11) 类似
+1. 和 [TrimLeft](/challenges/type/middle-11) 类似

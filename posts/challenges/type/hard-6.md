@@ -31,4 +31,4 @@ type OptionalKeys<T> = keyof {
 ```
 
 ### 拆分
-1. 和 [Get Optional](/projects/challenges/typescript/hard-4) [Required Keys](/projects/challenges/typescript/hard-5) 类似
+1. 和 [Get Optional](/challenges/type/hard-4) [Required Keys](/challenges/type/hard-5) 类似

@@ -42,7 +42,7 @@ type MyReadonly<T> = { readonly [K in keyof T]: T[K] }
 
 ### 拆分
 
-1. 和 [实现 Pick](/projects/challenges/typescript/easy-1) 相似 `keyof T` 是 `"title" | "description"` 用来限制 `T` 的范围
+1. 和 [实现 Pick](/challenges/type/easy-1) 相似 `keyof T` 是 `"title" | "description"` 用来限制 `T` 的范围
 2. `K in` 逐个拿取 `"title" | "description"` 通过索引对象包装
 3. 返回包装后的对象
 4. 这个并没有递归处理所以是属于浅只读

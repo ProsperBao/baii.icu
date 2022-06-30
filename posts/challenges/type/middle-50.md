@@ -34,4 +34,4 @@ type Flip<T> = {
 
 ### 拆分
 
-1. [Flip Arguments](/projects/challenges/typescript/middle-46) 类似
+1. [Flip Arguments](/challenges/type/middle-46) 类似

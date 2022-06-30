@@ -13,4 +13,4 @@ description: 更好的了解 TS 的类型系统，编写自己的类型工具，
 2. 了解大佬的挑战，更好的理解他们的思路
 3. 有点享受这种挑战完成时候的感觉
 
-[冲刺！查看挑战](/projects/challenges/typescript)
+[冲刺！查看挑战](/challenges/type)

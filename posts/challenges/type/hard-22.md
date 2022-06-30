@@ -111,6 +111,6 @@ declare function defineStore<S, G, A>(store: Pinia<S, G, A>): PiniaReturn<S, G, 
 
 ### 拆分
 
-* 和 [简单的 Vue 类型](/projects/challenges/typescript/hard-1) 类似
+* 和 [简单的 Vue 类型](/challenges/type/hard-1) 类似
 * `state` 的占用类型发生了变化
 * `getters` 和 `actions` 变成了可选
