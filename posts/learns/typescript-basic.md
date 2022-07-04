@@ -4,7 +4,7 @@ date: 2022-5-31 15:43:13
 lang: zh-CN
 duration: 15min
 description: Typescript 基础。
-type: learn
+type: learns
 ---
 
 [[toc]]

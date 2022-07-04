@@ -4,7 +4,7 @@ date: 2022-6-06 14:25:08
 lang: zh-CN
 duration: 10min
 description: Typescript 综合
-type: learn
+type: learns
 ---
 
 [[toc]]

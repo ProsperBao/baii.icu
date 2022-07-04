@@ -4,7 +4,7 @@ date: 2022-02-22 13:25:00
 lang: zh-CN
 duration: 5min
 description: 重写 ES6 数组扩展方法
-type: learn
+type: learns
 ---
 
 [[toc]]

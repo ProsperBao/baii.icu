@@ -1,5 +1,5 @@
 ---
-title: vite-plugin-md 在 Markdown 中使用 script setup
+title: 在 Markdown 中使用 script setup
 date: 2022-06-30 15:53:00
 lang: zh-CN
 duration: 10min

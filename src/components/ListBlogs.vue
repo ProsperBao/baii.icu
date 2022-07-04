@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import dayjs from 'dayjs'
+import { formatDate } from '~/composables/formatDate'
 const props = defineProps<{ type?: string }>()
 
 interface Post {
@@ -9,12 +9,13 @@ interface Post {
   lang?: string
   duration?: string
 }
-
 const router = useRouter()
 const routes: Post[] = router.getRoutes()
-  .filter(i => i.path.startsWith('/blogs') && i.name && i.meta.frontmatter.date)
+  .filter(i => i.path.startsWith(`/${props.type || 'blogs'}`) && i.name && i.meta.frontmatter.date)
   .sort((a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date))
-  .filter(i => !i.path.endsWith('.html') && i.meta.frontmatter.type === props.type)
+  .filter((i) => {
+    return !i.path.endsWith('.html') && i.meta.frontmatter.type === props.type
+  })
   .map(i => ({
     path: i.path,
     title: i.meta.frontmatter.title,
@@ -22,10 +23,7 @@ const routes: Post[] = router.getRoutes()
     lang: i.meta.frontmatter.lang,
     duration: i.meta.frontmatter.duration,
   }))
-
 const posts = routes
-
-const formatDate = (date: string) => dayjs(date).format('YYYY-MM-DD HH')
 </script>
 
 <template>

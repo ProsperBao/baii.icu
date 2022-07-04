@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { isClient } from '@vueuse/core'
 import { isDark } from '~/composables/dark'
-import { StarField } from '~/composables/galaxy-animation'
+import { StarField } from '~/composables/galaxyAnimation'
 
 let starfield: StarField | null
 const el = ref<HTMLCanvasElement | null>(null)

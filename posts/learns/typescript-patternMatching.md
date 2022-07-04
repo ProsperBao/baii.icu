@@ -4,7 +4,7 @@ date: 2022-5-31 18:30:01
 lang: zh-CN
 duration: 12min
 description: Typescript 模式匹配
-type: learn
+type: learns
 ---
 
 [[toc]]

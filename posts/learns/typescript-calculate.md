@@ -4,7 +4,7 @@ date: 2022-5-31 17:20:25
 lang: zh-CN
 duration: 5min
 description: Typescript 数值运算
-type: learn
+type: learns
 ---
 
 [[toc]]
