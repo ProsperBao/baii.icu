@@ -4,6 +4,11 @@ display: Challenges
 subtitle: I improve my ability through some challenges.
 description: I improve my ability through some challenges.
 projects:
+  Ongoing:
+    - name: 'SourceCodeReading'
+      link: '/challenges/source'
+      desc: 'The challenge of reading source code'
+      icon: 'i-carbon-bot'
   Finish:
     - name: 'TypeChallenges'
       link: '/challenges/type'
