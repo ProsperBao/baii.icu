@@ -22,9 +22,9 @@ VueUse 大部分的 hook 都是对浏览器操作的一些封装，在使用的�
 ```typescript
   /**
    * @param {string} event - 事件名称
-   * @params {MaybeRef | document | window} target - 目标元素
-   * @params {Event} listener - 处理事件
-   * @params {InferEventTarget} options - 配置项
+   * @param {MaybeRef | document | window} target - 目标元素
+   * @param {Event} listener - 处理事件
+   * @param {InferEventTarget} options - 配置项
    */
   useEventListener(event, listener, options)
   useEventListener(target, event, listener, options)
