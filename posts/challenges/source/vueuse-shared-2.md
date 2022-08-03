@@ -55,6 +55,6 @@ export const bypassFilter: EventFilter = (invoke) => {
 
 用于 `filter` 参数，传入即可实现
 
-[VueUse - Shared - watchPausable](/challenges/source/vueuse-shared-2.md) 就是使用 `pausableFilter` 实现的。
+[VueUse - Shared - watchPausable](/challenges/source/vueuse-shared-1) 就是使用 `pausableFilter` 实现的。
 
 
