@@ -9,7 +9,10 @@ export async function useSwitchLanguage(locale: WritableComputedRef<string>) {
     const pageRoute = routes.find(i => i.path === `${route.fullPath === '/' ? '' : route.fullPath}/index.${locale.value.toLocaleLowerCase()}`)
     if (pageRoute) {
       let load: DefineComponent | null = null
-      if (!pageRoute.components) return
+
+      if (!pageRoute.components)
+        return
+
       if (typeof (pageRoute.components.default) === 'function') {
         load = await (pageRoute.components.default as Function)()
         load = load!.default
