@@ -10,7 +10,7 @@ I hope to become a developer not only at the front end, but also keep up with th
 
 Here are my [all projects](/projects). I also learned that the mogul has opened [some challenges](/challenges) to enable me to learn, strengthen and improve the knowledge I have learned.
 
-In [here](/posts), I will also record some problems encountered or things learned.
+In [here](/blogs), I will also record some problems encountered or things learned.
 
 Hope have a chance to make a fortune. I will record some things here in the future.
 
