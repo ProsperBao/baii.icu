@@ -9,10 +9,8 @@ const toggleLocales = () => {
 
 <template>
   <header class="header z-40">
-    <router-link
-      class="absolute lg:fixed m-4 select-none outline-none flex gap-2 items-center" to="/"
-      focusable="false"
-    >
+    <router-link class="absolute lg:fixed m-4 select-none outline-none flex gap-2 items-center" to="/"
+      focusable="false">
       <img class="w-5 h-5 lt-sm:hidden" src="/logo.svg?url" alt="logo">
       <span text-xl dark:text-gray-200>FuBaooo</span>
     </router-link>
@@ -23,37 +21,32 @@ const toggleLocales = () => {
           <span class="lt-md:hidden">{{ t('nav.blog') }}</span>
           <div i-carbon-notebook md:hidden />
         </router-link>
-        <router-link
-          class="icon-btn" to="/learns" title="Learns"
-          :class="route.path === '/learns' ? '!opacity-100' : ''"
-        >
+        <router-link class="icon-btn" to="/learns" title="Learns"
+          :class="route.path === '/learns' ? '!opacity-100' : ''">
           <span class="lt-md:hidden">{{ t('nav.learns') }}</span>
           <div i-carbon-microscope class="md:hidden" />
         </router-link>
-        <router-link
-          class="icon-btn" to="/projects" title="Projects"
-          :class="route.path === '/projects' ? '!opacity-100' : ''"
-        >
+        <router-link class="icon-btn" to="/projects" title="Projects"
+          :class="route.path === '/projects' ? '!opacity-100' : ''">
           <span class="lt-md:hidden">{{ t('nav.projects') }}</span>
           <div i-carbon-ai-results-low class="md:hidden" />
         </router-link>
-        <router-link
-          class="icon-btn" to="/challenges" title="Challenges"
-          :class="route.path === '/challenges' ? '!opacity-100' : ''"
-        >
+        <router-link class="icon-btn" to="/challenges" title="Challenges"
+          :class="route.path === '/challenges' ? '!opacity-100' : ''">
           <span class="lt-md:hidden">{{ t('nav.challenges') }}</span>
           <div i-carbon-chart-venn-diagram class="md:hidden" />
         </router-link>
-        <a class="icon-btn" href="https://travellings.link/" target="_blank" rel="noopener" :title="t('nav.travelling-link')">
-          <span class="lt-md:hidden">{{ t('nav.travelling') }}</span>
-          <div i-carbon-train class="md:hidden" />
-        </a>
         <ToggleTheme />
         <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
           <div i-carbon-language />
         </a>
         <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/FuBaooo" target="_blank" title="GitHub">
           <div i-carbon-logo-github />
+        </a>
+        <a class="icon-btn" href="https://travellings.link" target="_blank" rel="noopener"
+          :title="t('nav.travelling-link')">
+          <span class="lt-md:hidden">{{ t('nav.travelling') }}</span>
+          <div i-carbon-train class="md:hidden" />
         </a>
       </div>
     </nav>
