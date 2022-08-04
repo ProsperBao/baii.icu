@@ -89,7 +89,7 @@ ts 支持以下这些类型：
 
 元组是元素个数和类型固定的数组
 
-```ts
+```typescript
 type Tuple = [number, string, boolean]
 ```
 
@@ -97,7 +97,7 @@ type Tuple = [number, string, boolean]
 
 接口用来描述函数、构造器、索引类型 ( 对象、class、数组 ) 等复合类型。
 
-```ts
+```typescript
 // 对象
 interface IPerson {
   name: string
@@ -136,7 +136,7 @@ function createPerson(ctor: PersonClassConstructor): IPerson {
 
 对象可以动态添加属性，如果不确定有什么属性，可以使用索引签名：
 
-```ts
+```typescript
 interface IPerson {
   [prop: string]: string | number
 }
@@ -146,7 +146,7 @@ interface IPerson {
 
 枚举 ( Enum ) 是一系列值的复合
 
-```ts
+```typescript
 enum Direction {
   TOP = 'top',
   BOTTOM = 'bottom',
@@ -157,7 +157,7 @@ enum Direction {
 
 ### 字面量类型
 
-```ts
+```typescript
 type Str1 = 'aaa'
 type Num = 1
 interface Obj { a: 1 }
@@ -177,7 +177,7 @@ type Str2 = `#${string}`
 
 除了描述类型的结构，TypeScript 的类型系统还支持描述类型的属性，比如是否可选、是否只读等：
 
-```ts
+```typescript
 interface IPerson {
   // 只读
   readonly name: string
@@ -192,7 +192,7 @@ interface IPerson {
 
 条件类型：`extends ? :` ，TypeScript 类型系统中的 `if else` ，进行动态的类型运算，即对类型参数的运算。
 
-```ts
+```typescript
 type IsTwo<T extends number> = T extends 2 ? true : false
 
 type Res = isTwo<1> // false
@@ -207,7 +207,7 @@ type Res2 = isTwo<2> // true
 
 TypeScript 使用 `infer` 进行类型的推导 / 提取。
 
-```ts
+```typescript
 // 提取元组类型的第一个元素
 type First<T extends unknown[]> = T extends [infer T, ...infer Rest] ? T : never
 
@@ -220,7 +220,7 @@ type Res = First<[1, 2, 3]> // 1
 
 联合类型 ( Union ) 类似 JavaScript 的或运算符 `|` ，但是作用于类型，表明类型可以是几个类型之一。
 
-```ts
+```typescript
 type Nums = 1 | 2 | 3
 ```
 
@@ -228,7 +228,7 @@ type Nums = 1 | 2 | 3
 
 交叉类型 ( Intersection ) 类似 JavaScript 中的与运算符 `&` ，但是作用于类型，表明对类型进行合并。
 
-```ts
+```typescript
 type Obj = { a: number } & { b: string } // { a: number, b: string }
 
 // 不同类型无法合并
@@ -241,7 +241,7 @@ type res = '1' & 1 // never
 
 映射类型：把一个集合映射到另一个集合。
 
-```ts
+```typescript
 type MapType<T> = {
   [Key in keyof T]?: T[Key]
 }
@@ -253,7 +253,7 @@ type MapType<T> = {
 
 `in` 是用于遍历联合类型的运算符
 
-```ts
+```typescript
 // 值和索引都可以变化
 type MapType<T> = {
   [Key in keyof T as `${Key & string}${Key & string}`]: [T[Key], T[Key]]

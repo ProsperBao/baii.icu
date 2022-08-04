@@ -13,7 +13,7 @@ TypeScript 虽然图灵完备，但没有加减乘除运算符，但可以通过
 
 ## 构造数组
 
-```ts
+```typescript
 type Tuple<
   T extends number,
   Res extends 1[] = [],
@@ -28,7 +28,7 @@ type Res = Tuple<3> // [1, 1, 1]
 
 加法：分别构造对应加数长度的两个元组，然后合并成一个
 
-```ts
+```typescript
 type Sum<A extends number, B extends number> = [
   ...Tuple<A>,
   ...Tuple<B>,
@@ -49,7 +49,7 @@ type Res3 = Sum<-1, 0> // 报错：类型实例化过深，且可能无限。ts(
 
 减数构造数组的长度 = 被减数构造数组和差构造数组合并后构造数组的长度
 
-```ts
+```typescript
 // M => minuend 被减数, S => subtrahend 减数
 type Subtract<M extends number, S extends number> = Tuple<M> extends [
   ...Tuple<S>,
@@ -73,7 +73,7 @@ TypeScript 无法处理负数，当差为负数时，返回 never 。
 
 `2 x 5 = 10` 可以理解为 `2 + 2 + 2 + 2 + 2 = 10` 或 `5 + 5 = 10`
 
-```ts
+```typescript
 type Multiply<
   A extends number,
   B extends number,
@@ -93,7 +93,7 @@ TypeScript 中的元组长度也有上限。
 
 除法：被除数不断减去减数，直到为 0 ，记录的次数就是商。
 
-```ts
+```typescript
 type Divide<
   A extends number,
   B extends number,
@@ -109,7 +109,7 @@ type Res = Divide<30, 5> // 6
 
 ### StrLen
 
-```ts
+```typescript
 // 尾递归
 type StrLen<
   S extends string,
@@ -123,7 +123,7 @@ type Res = StrLen<'hello'>
 
 ### GreaterThan
 
-```ts
+```typescript
 type GreaterThan<
   A extends number,
   B extends number,

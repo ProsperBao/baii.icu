@@ -15,7 +15,7 @@ type: learns
 
 TypeScript 的类型同样可以模式匹配：
 
-```ts
+```typescript
 type JiTui = Promise<'鸡腿'>
 
 type GetValueType<P> = P extends Promise<infer V> ? V : never
@@ -31,7 +31,7 @@ type ValueType = GetValueType<JiTui> // 鸡腿
 
 提取数组第一个元素的类型
 
-```ts
+```typescript
 type First<A extends unknown[]> = A extends [infer F, ...infer Rest] ? F : never
 
 type Res1 = First<[1, 2]> // 1
@@ -55,7 +55,7 @@ extends ：
 
 提取数组最后一个元素的类型
 
-```ts
+```typescript
 type Tail<A extends unknown[]> = A extends [...infer Rest, infer T] ? T : never
 
 type Res1 = Tail<[1, 2]> // 2
@@ -66,7 +66,7 @@ type Res2 = Tail<[]> // never
 
 提取数组去除最后一个元素的类型后，剩余元素的类型
 
-```ts
+```typescript
 type Pop<A extends unknown[]> = A extends []
   ? []
   : A extends [...infer Rest, unknown]
@@ -84,7 +84,7 @@ type Res3 = Pop<[]> // []
 
 提取数组去除第一个元素的类型后，剩余元素的类型
 
-```ts
+```typescript
 type Shift<A extends unknown[]> = A extends []
   ? []
   : A extends [unknown, ...infer Rest]
@@ -102,7 +102,7 @@ type Res3 = Shift<[]> // []
 
 判断字符串类型是否以某个前缀开头
 
-```ts
+```typescript
 type StartsWith<
   S extends string,
   Prefix extends string,
@@ -119,7 +119,7 @@ type Res5 = StartsWith<'', 'j'> // false
 
 字符串替换
 
-```ts
+```typescript
 type Replace<
   S extends string,
   From extends string,
@@ -135,7 +135,7 @@ type Res = Replace<'jitui zhen hao chi!', 'jitui', 'pizza'>
 
 不确定有多少个空白字符，需要递归去除
 
-```ts
+```typescript
 // 空白字符的 union
 type Blank = ' ' | '\n' | '\t'
 
@@ -160,7 +160,7 @@ type Res = Trim<' \t\njitui\n \t'> // jitui
 
 通过模式匹配提取函数参数类型
 
-```ts
+```typescript
 type GetParameters<F extends (...args: any) => any> = F extends (
   ...args: infer Args
 ) => unknown
@@ -174,7 +174,7 @@ type Res = GetParameters<(a: string, b: number) => string> // [a: string, b: num
 
 通过模式匹配提取函数返回值类型
 
-```ts
+```typescript
 type GetReturnType<F extends (...args: any) => any> = F extends (...args: any) => infer R
   ? R
   : never
@@ -188,7 +188,7 @@ TypeScript 内置了 `ReturnType` 类型完成上述功能。
 
 this 的指向可以被显式指定，也可以通过模式匹配提取得到。
 
-```ts
+```typescript
 class Person {
   name: string
 
@@ -222,7 +222,7 @@ p.nihao.call({ xxx: 1 }) // nihao lo
 
 **建议使用箭头函数声明方法，这样 this 会默认绑定为所在的类实例。**
 
-```ts
+```typescript
 type GetThisParameterType<T> = T extends (
   this: infer ThisType,
   ...args: any
@@ -243,7 +243,7 @@ TypeScript 内置了 `ThisParameterType` 完成上述功能。
 
 通过模式匹配提取构造器返回值类型
 
-```ts
+```typescript
 interface Person {
   name: string
 }
@@ -263,7 +263,7 @@ TypeScript 内置了 `InstanceType` 完成上述功能
 
 通过模式匹配提取构造器参数类型
 
-```ts
+```typescript
 interface Person {
   name: string
 }
@@ -287,7 +287,7 @@ TypeScript 内置了 `ConstructorParameters` 完成上述功能
 
 通过模式匹配提取对象类型中 `ref` 字段的类型
 
-```ts
+```typescript
 type GetRefProps<P> = 'ref' extends keyof P
   ? P extends { ref?: infer V | undefined }
     ? V

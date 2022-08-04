@@ -14,7 +14,7 @@ levelTitle: Middle
 
 例如
 
-```ts
+```typescript
 type replaced = ReplaceAll<'t y p e s', ' ', ''> // 期望是 'types'
 ```
 

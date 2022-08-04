@@ -25,7 +25,7 @@ levelTitle: Hard
 
 `SimpleVue`的返回值类型可以是任意的。
 
-```ts
+```typescript
 const instance = SimpleVue({
   data() {
     return {

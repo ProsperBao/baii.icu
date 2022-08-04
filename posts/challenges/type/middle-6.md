@@ -15,7 +15,7 @@ levelTitle: Middle
 
 例如
 
-```ts
+```typescript
 declare const config: Chainable
 
 const result = config

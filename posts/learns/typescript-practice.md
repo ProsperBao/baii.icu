@@ -13,7 +13,7 @@ type: learns
 
 ### ParseQueryString
 
-```ts
+```typescript
 type ParseParam<Param extends string> =
   Param extends `${infer Key}=${infer Value}`
     ? {
@@ -79,7 +79,7 @@ res.a // 获得类型提示
 
 ### Promise.all
 
-```ts
+```typescript
 interface PromiseConstructor {
   all<T extends readonly unknown[] | []>(
     values: T,
@@ -99,7 +99,7 @@ T 的类型约束是 `unknown[] | []` 的原因是为了正确处理 `as const` 
 
 柯里化
 
-```ts
+```typescript
 type CurriedFunc<Args, R> = Args extends [infer F, ...infer Rest]
   ? (arg: F) => CurriedFunc<Rest, R>
   : R
@@ -111,7 +111,7 @@ declare function currying<F>(
 
 ### KebabCase2CamelCase
 
-```ts
+```typescript
 type KebabCase2CamelCase<S extends string> =
   S extends `${infer F}-${infer Rest}`
     ? `${F}${KebabCase2CamelCase<Capitalize<Rest>>}`
@@ -128,7 +128,7 @@ type KebabCase2CamelCase<
 
 ### CamelCase2KebabCase
 
-```ts
+```typescript
 type CamelCase2KebabCase<S extends string> = S extends `${infer F}${infer Rest}`
   ? `${F extends Lowercase<F>
     ? F
@@ -151,7 +151,7 @@ type CamelCase2KebabCase<
 
 将数组或元组中的元素按照指定的长度进行分组。
 
-```ts
+```typescript
 type Chunk<
   Arr extends unknown[],
   Len extends number,
@@ -166,7 +166,7 @@ type Chunk<
 
 ### Tuple2NestedObject
 
-```ts
+```typescript
 type Tuple2NestedObject<T, V> = T extends [infer F, ...infer R]
   ? {
       [P in F as P extends keyof any ? P : never]: Tuple2NestedObject<R, V>
@@ -176,7 +176,7 @@ type Tuple2NestedObject<T, V> = T extends [infer F, ...infer R]
 
 ### PartialObjectPropByKeys
 
-```ts
+```typescript
 type PartialObjectPropByKeys<
   Obj extends Record<string, unknown>,
   Key extends keyof any,
@@ -185,7 +185,7 @@ type PartialObjectPropByKeys<
 
 ### 函数重载
 
-```ts
+```typescript
 // 第一种
 declare function func(name: string): string
 declare function func(name: number): number
@@ -202,7 +202,7 @@ type Func = ((name: string) => string) & ((name: number) => number)
 
 ### UnionToTuple
 
-```ts
+```typescript
 type UnionToIntersection<T> = (
   T extends T ? (arg: T) => unknown : never
 ) extends (arg: infer R) => unknown
@@ -232,7 +232,7 @@ type UnionToTuple<T, Res extends unknown[] = []> = UnionToIntersection<
 
 ### join
 
-```ts
+```typescript
 declare function join<Delimiter extends string>(
   delimiter: Delimiter,
 ): <Items extends string[]>(...args: Items) => JoinType<Items, Delimiter>
@@ -254,7 +254,7 @@ const res = join('-')('guang', 'and', 'dong') // let res: "guang-and-dong"
 
 ### DeepCamelize
 
-```ts
+```typescript
 type DeepCamelize<Obj extends Record<string, any>> = Obj extends unknown[]
   ? CamelizeArr<Obj>
   : {
@@ -272,7 +272,7 @@ type CamelizeArr<Arr> = Arr extends [infer First, ...infer Rest]
 
 实现这样一个高级类型，对 A、B 两个索引类型做合并，如果是只有 A 中有的不变，如果是 A、B 都有的就变为可选，只有 B 中有的也变为可选。
 
-```ts
+```typescript
 type Defaultize<A, B> = Pick<A, Exclude<keyof A, keyof B>> &
 Partial<Pick<A, Extract<keyof A, keyof B>>> &
 Partial<Pick<B, Exclude<keyof B, keyof A>>>

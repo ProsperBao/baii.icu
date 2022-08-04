@@ -14,7 +14,7 @@ Implement `Capitalize<T>` which converts the first letter of a string to upperca
 
 For example
 
-```ts
+```typescript
 type capitalized = Capitalize<'hello world'> // expected to be 'Hello world'
 ```
 

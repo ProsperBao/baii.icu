@@ -15,7 +15,7 @@ levelTitle: Middle
 
 例如
 
-```ts
+```typescript
 interface X {
   x: {
     a: 1

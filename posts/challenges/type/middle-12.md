@@ -13,7 +13,7 @@ levelTitle: Middle
 实现一个 `Trim<T>` 接收一个字符串，并去除两端空格，返回一个新的字符串。
 
 例如：
-```ts
+```typescript
 type trimed = Trim<'  Hello World  '> // 输出是 'Hello World'
 ```
 

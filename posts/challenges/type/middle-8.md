@@ -16,7 +16,7 @@ levelTitle: Middle
 
 例如
 
-```ts
+```typescript
 type arr1 = ['a', 'b', 'c', 'd']
 type arr2 = [3, 2, 1]
 

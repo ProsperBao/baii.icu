@@ -14,7 +14,7 @@ levelTitle: Hard
 
 例如：
 
-```ts
+```typescript
 const add = (a: number, b: number) => a + b
 const three = add(1, 2)
 

@@ -19,7 +19,7 @@ levelTitle: Easy
 
 例如：
 
-```ts
+```typescript
 interface Todo {
   title: string
   description: string

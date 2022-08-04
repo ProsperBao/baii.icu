@@ -13,7 +13,7 @@ levelTitle: Easy
 
 例如：
 
-```ts
+```typescript
 type arr1 = ['a', 'b', 'c']
 type arr2 = [3, 2, 1]
 

@@ -13,7 +13,7 @@ levelTitle: Easy
 
 举例来说，
 
-```ts
+```typescript
 type isPillarMen = Includes<['Kars', 'Esidisi', 'Wamuu', 'Santana'], 'Dio'> // expected to be `false`
 ```
 

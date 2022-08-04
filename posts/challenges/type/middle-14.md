@@ -14,7 +14,7 @@ levelTitle: Middle
 
 例如
 
-```ts
+```typescript
 type replaced = Replace<'types are fun!', 'fun', 'awesome'> // 期望是 'types are awesome!'
 ```
 

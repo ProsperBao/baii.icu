@@ -19,7 +19,7 @@ TypeScript 支持 type 、infer 、类型参数来保存任意类型，但它们
 
 ### Push
 
-```ts
+```typescript
 type Push<Arr extends unknown[], X> = [...Arr, X]
 
 type Res = Push<[1, 2, 3], 4> // [1, 2, 3, 4]
@@ -27,7 +27,7 @@ type Res = Push<[1, 2, 3], 4> // [1, 2, 3, 4]
 
 ### Unshift
 
-```ts
+```typescript
 type Unshift<Arr extends unknown[], X> = [X, ...Arr]
 
 type Res = Unshift<[1, 2, 3], 4> // [4, 1, 2, 3]
@@ -35,7 +35,7 @@ type Res = Unshift<[1, 2, 3], 4> // [4, 1, 2, 3]
 
 ### Zip
 
-```ts
+```typescript
 type Zip<A extends unknown[], B extends unknown[]> = A extends [
   infer AF,
   ...infer AR,
@@ -64,7 +64,7 @@ type Res1 = Zip1<[1, 2], [3, 4]> // [[1, 3], [2, 4]]
 
 ### CapitalizeStr
 
-```ts
+```typescript
 type CapitalizeStr<S extends string> = S extends `${infer F}${infer R}`
   ? `${Uppercase<F>}${R}`
   : S
@@ -76,7 +76,7 @@ TypeScript 内置了 `Capitalize` 实现上述功能
 
 ### CamelCase
 
-```ts
+```typescript
 type CamelCase<S extends string> = S extends `${infer F}-${infer R}`
   ? `${F}${Capitalize<CamelCase<R>>}`
   : S
@@ -101,7 +101,7 @@ type Res2 = CamelCase1<'aa-bb-cc'> // aaBbCc
 
 ### DropSubStr
 
-```ts
+```typescript
 type DropSubStr<
   S extends string,
   SubStr extends string,
@@ -135,7 +135,7 @@ type Res2 = DropSubStr2<'hello~~~', '~'> // hello
 
 ### AppendArgument
 
-```ts
+```typescript
 type AppendArgument<F extends (...args: any) => any, Arg> = F extends (
   ...args: infer Args
 ) => infer R
@@ -153,7 +153,7 @@ type Res = AppendArgument<(a: string) => boolean, number> // (args_0: string, ar
 
 例如：
 
-```ts
+```typescript
 interface Person {
   name: string
   readonly age: number
@@ -163,7 +163,7 @@ interface Person {
 
 ### Mapping
 
-```ts
+```typescript
 type Mapping<O extends Record<string, unknown>> = {
   [P in keyof O]: [O[P], O[P]]
 }
@@ -175,7 +175,7 @@ type Res = Mapping<{ a: 1 }> // { a: [1, 1] }
 
 使用 as 对对象类型的 key 进行修改，叫做重映射。
 
-```ts
+```typescript
 type UppercaseKey<O extends Record<string, unknown>> = {
   [P in keyof O as Uppercase<P & string>]: O[P]
 }
@@ -185,7 +185,7 @@ type Res = UppercaseKey<{ a: 1 }> // { A: 1 }
 
 ### MyRecord
 
-```ts
+```typescript
 type MyRecord<K extends string | number | symbol, V> = { [P in K]: V }
 ```
 
@@ -193,7 +193,7 @@ TypeScript 内置了 `Record` 完成上述功能。
 
 ### ToReadonly
 
-```ts
+```typescript
 type ToReadonly<T> = {
   readonly [P in keyof T]: T[P]
 }
@@ -205,7 +205,7 @@ TypeScript 内置了 `Readonly` 完成上述功能。
 
 ### ToPartial
 
-```ts
+```typescript
 type ToPartial<T> = {
   [P in keyof T]?: T[P]
 }
@@ -217,7 +217,7 @@ TypeScript 内置了 `Partial` 完成上述功能。
 
 ### ToMutable
 
-```ts
+```typescript
 type ToMutable<T> = {
   -readonly [Key in keyof T]: T[Key]
 }
@@ -227,7 +227,7 @@ type Res = ToMutable<{ readonly a: 1 }> // { a: 1 }
 
 ### ToRequired
 
-```ts
+```typescript
 type ToRequired<T> = {
   [Key in keyof T]-?: T[Key]
 }
@@ -239,7 +239,7 @@ TypeScript 内置了 `Required` 完成上述功能。
 
 ### FilterByValueType
 
-```ts
+```typescript
 type FilterByValueType<Obj extends Record<string, any>, ValueType> = {
   [Key in keyof Obj as ValueType extends Obj[Key] ? Key : never]: Obj[Key]
 }

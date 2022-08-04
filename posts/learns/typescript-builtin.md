@@ -15,7 +15,7 @@ TypeScript 内置的高级类型。
 
 提取函数类型的参数类型。
 
-```ts
+```typescript
 type Parameters<T extends (...args: any) => any> = T extends (
   ...args: infer P
 ) => any
@@ -27,7 +27,7 @@ type Parameters<T extends (...args: any) => any> = T extends (
 
 提取函数类型的返回值类型。
 
-```ts
+```typescript
 type ReturnType<T extends (...args: any) => any> = T extends (
   ...args: any
 ) => infer R
@@ -39,7 +39,7 @@ type ReturnType<T extends (...args: any) => any> = T extends (
 
 提取构造器参数的类型。
 
-```ts
+```typescript
 type ConstructorParameters<T extends abstract new (...args: any) => any> =
   T extends abstract new (...args: infer P) => any ? P : never
 ```
@@ -48,7 +48,7 @@ type ConstructorParameters<T extends abstract new (...args: any) => any> =
 
 提取构造器返回值的类型。
 
-```ts
+```typescript
 type InstanceType<T extends abstract new (...args: any) => any> =
   T extends abstract new (...args: any) => infer R ? R : never
 ```
@@ -57,7 +57,7 @@ type InstanceType<T extends abstract new (...args: any) => any> =
 
 提取 this 的类型。
 
-```ts
+```typescript
 type ThisParameterType<T> = T extends (this: infer U, ...args: any) => any
   ? U
   : never
@@ -67,7 +67,7 @@ type ThisParameterType<T> = T extends (this: infer U, ...args: any) => any
 
 删除 this 的类型。
 
-```ts
+```typescript
 type OmitThisParameter<T> = unknown extends ThisParameterType<T>
   ? T
   : T extends (...args: infer A) => infer R
@@ -79,7 +79,7 @@ type OmitThisParameter<T> = unknown extends ThisParameterType<T>
 
 变为可选索引。
 
-```ts
+```typescript
 type Partial<T> = {
   [P in keyof T]?: T[P]
 }
@@ -89,7 +89,7 @@ type Partial<T> = {
 
 去掉索引的可选 ( 必填 ) 。
 
-```ts
+```typescript
 type Required<T> = {
   [P in keyof T]-?: T[P]
 }
@@ -99,7 +99,7 @@ type Required<T> = {
 
 变为只读索引。
 
-```ts
+```typescript
 type Readonly<T> = {
   readonly [P in keyof T]: T[P]
 }
@@ -109,7 +109,7 @@ type Readonly<T> = {
 
 过滤出对象类型中需要的索引。
 
-```ts
+```typescript
 type Pick<T, K extends keyof T> = {
   [P in K]: T[P]
 }
@@ -119,7 +119,7 @@ type Pick<T, K extends keyof T> = {
 
 创建索引类型。
 
-```ts
+```typescript
 type Record<K extends keyof any, T> = {
   [P in K]: T
 }
@@ -131,7 +131,7 @@ type Record<K extends keyof any, T> = {
 
 从联合类型中去掉一部分类型。
 
-```ts
+```typescript
 type Exclude<T, U> = T extends U ? never : T
 ```
 
@@ -139,7 +139,7 @@ type Exclude<T, U> = T extends U ? never : T
 
 从联合类型中过滤出想要的类型。
 
-```ts
+```typescript
 type Extract<T, U> = T extends U ? T : never
 ```
 
@@ -147,7 +147,7 @@ type Extract<T, U> = T extends U ? T : never
 
 删除对象类型中不需要的索引。
 
-```ts
+```typescript
 type Omit<T, K extends keyof any> = {
   [P in Exclude<keyof T, K>]: T[P]
 }
@@ -155,7 +155,7 @@ type Omit<T, K extends keyof any> = {
 
 ### Awaited
 
-```ts
+```typescript
 type Awaited<T> = T extends null | undefined
   ? T
   : T extends object & { then(onfulfilled: infer F): any }
@@ -171,7 +171,7 @@ type Awaited<T> = T extends null | undefined
 
 判断是否为非空类型。
 
-```ts
+```typescript
 type NonNullable<T> = T extends null | undefined ? never : T
 ```
 
@@ -179,7 +179,7 @@ type NonNullable<T> = T extends null | undefined ? never : T
 
 Uppercase 、Lowercase 、Capitalize 、Uncapitalize
 
-```ts
+```typescript
 type Uppercase<S extends string> = intrinsic
 
 type Lowercase<S extends string> = intrinsic

@@ -15,7 +15,7 @@ levelTitle: Extreme
 
 但是在前端的日常开发中，柯里化函数参数个数动态化却是非常常见的，例如 `Function.bind(this, [...params])`
 
-```ts
+```typescript
 const func = (a: number, b: number, c: number) => {
   return a + b + c
 }
@@ -27,7 +27,7 @@ const result = bindFunc(3) // result: 6
 
 因此，在 `柯里化` 的基础上，我们更需要的是 `动态参数化的柯里化函数`
 
-```ts
+```typescript
 const add = (a: number, b: number, c: number) => a + b + c
 const three = add(1, 1, 1)
 

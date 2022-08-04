@@ -23,7 +23,7 @@ TypeScript 给 JavaScript 添加了一套静态类型系统，目的是保证类
 
 ### 协变
 
-```ts
+```typescript
 interface Person {
   name: string
   age: number
@@ -42,7 +42,7 @@ interface Guang {
 
 ### 逆变
 
-```ts
+```typescript
 let printHobbies: (guang: Guang) => void
 
 printHobbies = (guang) => {

@@ -11,7 +11,7 @@ levelTitle: Middle
 ### 问题
 键入函数`PromiseAll`，它接受PromiseLike对象数组，返回值应为`Promise<T>`，其中`T`是解析的结果数组。
 
-```ts
+```typescript
 const promiseAllTest1 = PromiseAll([1, 2, 3] as const) // Promise<[1, 2, 3]>
 const promiseAllTest2 = PromiseAll([1, 2, Promise.resolve(3)] as const) // Promise<[1, 2, number]>
 const promiseAllTest3 = PromiseAll([1, 2, Promise.resolve(3)]) // Promise<[number, number, number]>
