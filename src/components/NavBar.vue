@@ -44,6 +44,10 @@ const toggleLocales = () => {
           <span class="lt-md:hidden">{{ t('nav.challenges') }}</span>
           <div i-carbon-chart-venn-diagram class="md:hidden" />
         </router-link>
+        <a class="icon-btn" href="https://travellings.link/" target="_blank" rel="noopener" :title="t('nav.travelling-link')">
+          <span class="lt-md:hidden">{{ t('nav.travelling') }}</span>
+          <div i-carbon-train class="md:hidden" />
+        </a>
         <ToggleTheme />
         <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
           <div i-carbon-language />
