@@ -25,6 +25,6 @@ export const createApp = ViteSSG(
   (ctx) => {
     dayjs.extend(LocalizedFormat)
     // install all modules under `modules/`
-    Object.values(import.meta.glob<true, string, { install: Function }>('./modules/*.ts', { eager: true })).forEach(i => i.install?.(ctx))
+    Object.values(import.meta.globEager('./modules/*.ts')).forEach((i: any) => i.install?.(ctx))
   },
 )
