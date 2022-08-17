@@ -3,8 +3,6 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
-export {}
-
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Background: typeof import('./src/components/Background.vue')['default']
@@ -22,3 +20,5 @@ declare module '@vue/runtime-core' {
     WrapLanguage: typeof import('./src/components/WrapLanguage.vue')['default']
   }
 }
+
+export {}
