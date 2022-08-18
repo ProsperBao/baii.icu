@@ -18,7 +18,7 @@ projects:
       desc: 'The challenge of reading source code'
       icon: 'i-carbon-bot'
     - name: 'RestraintCalendar'
-      link: 'https://almanac.baii.icu'
+      link: 'https://github.com/FuBaooo/restraint-calendar'
       desc: 'A restraint almanac'
       icon: 'i-carbon:floating-ip'
   Challenge:
