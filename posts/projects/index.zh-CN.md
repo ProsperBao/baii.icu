@@ -17,8 +17,8 @@ projects:
       link: '/challenges/source'
       desc: '阅读源代码的挑战'
       icon: 'i-carbon-bot'
-    - name: 'RestraintCalendar'
-      link: 'https://github.com/FuBaooo/restraint-calendar'
+    - name: 'RestraintAlmanac'
+      link: 'https://github.com/FuBaooo/restraint-almanac'
       desc: '自律人黄历'
       icon: 'i-carbon:floating-ip'
   挑战:
