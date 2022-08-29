@@ -25,4 +25,6 @@ title: 福宝
 
 ***
 
-![https://almanac.baii.icu](https://almanac.baii.icu/api/almanac/picture)
+<a href="https://almanac.baii.icu">
+  <img src="https://almanac.baii.icu/api/almanac/picture" alt="picture"  style="width: 400px;margin: 0 auto;">
+</a>
