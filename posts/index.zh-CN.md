@@ -22,3 +22,7 @@ title: 福宝
 
 
 灵感来自于 [@antfu](https://antfu.me/)，感谢大佬的博客。<br />
+
+***
+
+![https://almanac.baii.icu](https://almanac.baii.icu/api/almanac/picture)
