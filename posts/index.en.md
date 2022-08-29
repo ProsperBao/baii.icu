@@ -19,4 +19,8 @@ Hope have a chance to make a fortune. I will record some things here in the futu
 Find me on [Github](https://github.com/FuBaooo).<br/>
 Mail me at [baihe2233@gmail.com](mailto:baihe2233@gmail.com).<br />
 
-Inspired by [@antfu](https://antfu.me/), Thank you for mogul blog.
+Inspired by [@antfu](https://antfu.me/), Thank you for blog.
+
+***
+
+![https://almanac.baii.icu](https://almanac.baii.icu/api/almanac/picture)
