@@ -66,7 +66,7 @@ description: 在使用 Netlify 部署时遇到的几个问题
 
 `jsdom` 这个库主要是用来模仿 dom 操作来操作生成 Svg。
 
-但是没有使用到 Canvas 这个 api，但是 `jsdom` 又依赖到了，不安装还不能打包。
+但是没有使用到 Canvas 这个 api，但是 `jsdom` 又依赖到了。
 
 部署上去之后还是和问题一一个错误，所以也得配置环境变量。
 
