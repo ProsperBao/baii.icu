@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     Post: typeof import('./src/components/Post.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sakana: typeof import('./src/components/Sakana.vue')['default']
     SolarSystem: typeof import('./src/components/SolarSystem.vue')['default']
     ToggleTheme: typeof import('./src/components/ToggleTheme.vue')['default']
     WrapLanguage: typeof import('./src/components/WrapLanguage.vue')['default']

@@ -4,4 +4,6 @@
     <RouterView />
   </main>
   <Background />
+  <Sakana licolico="chisato" />
+  <Sakana licolico="takina" />
 </template>
