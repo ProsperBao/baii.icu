@@ -18,7 +18,7 @@ position:fixed 的元素将相对于屏幕视口（viewport）的位置来指定
 
 在许多情况下, position:fixed 将会失效。
 
-(MDN)[https://developer.mozilla.org/zh-CN/docs/Web/CSS/position] 用一句话概括了这种情况: 
+[MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position) 用一句话概括了这种情况: 
 
 当元素祖先的 transform 属性非 none 时, 容器由视口改为该祖先。
 通俗的讲就是指定了 position:fixed 的元素, 如果其祖先元素存在非 none 的 transform 值 , 那么该元素将相对于设定了 transform 的祖先元素进行定位。
@@ -34,7 +34,7 @@ position:fixed 的元素将相对于屏幕视口（viewport）的位置来指定
 ## 创建堆叠上下文的方式
 
 如何触发一个元素形成 堆叠上下文
-方法如下(参考自 (MDN)[https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context]):
+方法如下(参考自 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)):
 
 - 根元素 (HTML)
 - z-index 值不为 "auto"的 绝对/相对定位
