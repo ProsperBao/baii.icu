@@ -64,7 +64,7 @@ position:fixed 的元素将相对于屏幕视口（viewport）的位置来指定
 - ilter值不为 none 的元素
 - ackdrop-filter 值不为 none的元素
 
-### 兼容性问题
+## 兼容性问题
 
 每个浏览器都有不同的兼容问题，需要针对每个浏览器做兼容。
 
