@@ -12,6 +12,8 @@ Here are my [all projects](/projects). I also learned that the mogul has opened 
 
 In [here](/blogs), I will also record some problems encountered or things learned.
 
+These are [things](/bookmark) that I find interesting.
+
 Hope have a chance to make a fortune. I will record some things here in the future.
 
 ***

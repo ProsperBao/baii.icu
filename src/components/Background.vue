@@ -11,7 +11,7 @@ import { isDark } from '~/composables/dark'
 
 <style>
 .fade-enter-active {
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-in;
 }
 
 .fade-leave-active {
