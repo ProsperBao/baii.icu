@@ -22,6 +22,10 @@ projects:
       link: 'https://www.tldraw.com/'
       desc: '非常好用的在轻量级的绘图工具'
       icon: 'i-carbon:flow-modeler-reference'
+    - name: 'SvgPathEditor'
+      link: 'https://yqnn.github.io/svg-path-editor/'
+      desc: 'SVG 路径编辑'
+      icon: 'i-carbon:paint-brush-alt'
 ---
 
 <list-projects :projects="frontmatter.projects"></list-projects>
