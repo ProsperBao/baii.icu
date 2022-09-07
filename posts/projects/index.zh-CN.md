@@ -27,6 +27,10 @@ projects:
       desc: '已经挑战完成的 Typescript 挑战'
       icon: 'i-carbon-ai-results-high'
   维护中:
+    - name: 'Bookmark'
+      link: '/bookmark'
+      desc: '这些是我觉得有意思的东西'
+      icon: 'i-carbon:bookmark'
     - name: 'DstCloudManage'
       link: 'https://github.com/FuBaooo/dst-cloud-manage'
       desc: '一个饥荒服务器管理工具'
