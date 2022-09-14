@@ -2,7 +2,7 @@
 title: Rust 函数
 date: 2022-09-12 15:58:00
 lang: zh-CN
-duration: 10min
+duration: 3min
 description: Rust 函数
 type: learns
 ---
