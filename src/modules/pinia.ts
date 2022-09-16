@@ -15,9 +15,3 @@ export const install: UserModule = ({ isClient, initialState, app }) => {
   else
     initialState.pinia = pinia.state.value
 }
-
-// 分割成 sas  56565:45454
-const a = 'sas:56565:45454'
-
-a.substring(0, a.indexOf(':'))
-a.substring(a.indexOf(':'))
