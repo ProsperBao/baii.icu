@@ -52,7 +52,7 @@ const toggleLocales = () => {
           <div i-carbon-logo-github />
         </a>
         <a
-          class="icon-btn" href="https://travellings.link" target="_blank" rel="noopener"
+          class="icon-btn" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener"
           :title="t('nav.travelling-link')"
         >
           <span class="lt-md:hidden">{{ t('nav.travelling') }}</span>
