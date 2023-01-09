@@ -99,6 +99,6 @@ description: 虚拟表格的一些问题
 
 附上 `Element Plus` 使用后的简单 demo, 算是复盘一下. `ad-grid` 和 `Element Plus` 的使用方式是一样的, 只是 `ad-grid` 的性能更好.
 
-[Element Plus Demo](https://stackblitz.com/edit/vitejs-vite-gy5bpe?file=src/pages/index.vue)
+[Element Plus Demo](https://virtual-table-demo.vercel.app/)
 
 ## 以后还有问题再继续记录
