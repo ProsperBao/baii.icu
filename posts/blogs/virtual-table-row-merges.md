@@ -102,12 +102,12 @@ description: 虚拟表格的一些问题
 
 ### 示例
 Element Plus
-<iframe style="width: 100%;overflow: hidden;height: 480px;" src="https://virtual-table-demo.vercel.app/#/"></iframe>
+<iframe style="width: 100%;overflow: hidden;height: 480px;" src="http://virtual-demo.baii.icu/#/"></iframe>
 Ag-grid
-<iframe style="width: 100%;overflow: hidden;height: 480px;" src="https://virtual-table-demo.vercel.app/#/grid"></iframe>
+<iframe style="width: 100%;overflow: hidden;height: 480px;" src="http://virtual-demo.baii.icu/#/grid"></iframe>
 vxe-table
 其实和 Ag-grid 差不多，性能会和功能丰富性都会稍差点，不过文档非常友好，暂时不添加进示例
 
-[对比性能](https://virtual-table-demo.vercel.app/#/contrast)
+[对比性能](http://virtual-demo.baii.icu/#/contrast)
 
 ## 以后还有问题再继续记录
