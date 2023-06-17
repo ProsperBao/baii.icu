@@ -84,7 +84,7 @@ description: 升级架构和迭代工具库
 
 但是有个问题 v-model 支持的问题 web component 的自定义事件和正常的组建的事件是不一样的值是在 CustomEvent 的 detail 中，所以需要自己处理一下
 
-所以我选择了 web component 的方案，虽然有点麻烦，但是都可以解决的，vue2 我选择直接写一个 v-ce-model 来代替 v-model 的双向绑定，vue3 可以直接使用 [白三物语](https://github.com/baiwusanyu-c/unplugin-vue-ce) 大佬的库就可以了，虽然可能有破坏性改动，但是整体来说只要能用并且内部尽可能使用默认配置，问题一般不大，出问题直接固定版本完事了。但是！！但是！！但是！！web component 只是为了解决 2 和 3 的兼容问题，vue3 的代码还是 vue 3 的代码，不需要包裹 defineCustomElement 直接导出就可以使用
+所以我选择了 web component 的方案，虽然有点麻烦，但是都可以解决的，vue2 我选择直接写一个 v-ce-model 来代替 v-model 的双向绑定，vue3 可以直接使用 [白三物语](https://github.com/baiwusanyu-c/unplugin-vue-ce) 大佬的库就可以了，虽然可能有破坏性改动，但是整体来说只要能用并且内部尽可能使用默认配置，问题一般不大，出问题直接固定版本完事了。但是！！但是！！但是！！我这里选择 web component 只是为了解决 2 和 3 的兼容问题，vue3 的代码还是 vue 3 的代码，不需要包裹 defineCustomElement 直接导出就可以使用
 
 #### 组件库构建
 整体前端已经升级到 pnpm 管理项目了，所以直接用 monorepo 拆分不同的包，带一个整体导出就可以了。
@@ -100,6 +100,7 @@ description: 升级架构和迭代工具库
 │   ├── utils           # 一些 Ts 公共类型定义 和一些公共的业务方法或者工具方法
 │   ├── plugin          # 一些打包构建工具的插件 (v-ce-model就是在这个目录) 并且还有一些其他的插件
 │   ├── norm            # 公共规范配置 Eslint Husky 等
+│   ├── core            # 整体导出
 ```
 
 #### 组件库使用的一些工具
@@ -109,3 +110,4 @@ description: 升级架构和迭代工具库
 - utils -> unbuild
 - plugin -> unbuild
 - norm 导出配置就完事了
+- core -> unbuild
