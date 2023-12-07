@@ -50,6 +50,6 @@ description: 回顾总结一下这次复杂虚拟表格优化的点和总结
 
 ## 参考
 针对部分情况进行了优化，让代码看起来更直观和更美观以及更好的性能
-<iframe style="width: 100%;overflow: hidden;height: 480px;" src="http://virtual-demo.baii.icu/#/grid"></iframe>
+<iframe style="width: 100%;overflow: hidden;height: 480px;" src="https://celebrated-marshmallow-f1c794.netlify.app/#/grid"></iframe>
 
 项目代码可以参考 [这里](https://github.com/FuBaooo/virtual-table-demo)
