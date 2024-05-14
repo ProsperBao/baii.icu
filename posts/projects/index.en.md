@@ -1,12 +1,12 @@
 ---
-title: Projects - FuBaooo
+title: Projects - ProsperBao
 display: Projects
 subtitle: I participated in some projects or challenges, although not many.
 description: I participated in some projects or challenges, although not many.
 projects:
   Ongoing:
     - name: 'Baii.icu'
-      link: 'https://github.com/FuBaooo/baii.icu'
+      link: 'https://github.com/ProsperBao/baii.icu'
       desc: 'this blog'
       icon: 'i-carbon-edit'
     - name: 'SourceCodeReading'
@@ -14,7 +14,7 @@ projects:
       desc: 'The challenge of reading source code'
       icon: 'i-carbon-bot'
     - name: 'RestraintAlmanac'
-      link: 'https://github.com/FuBaooo/restraint-almanac'
+      link: 'https://github.com/ProsperBao/restraint-almanac'
       desc: 'A restraint almanac'
       icon: 'i-carbon:floating-ip'
   Challenge:
@@ -28,11 +28,11 @@ projects:
       desc: 'These are things that I find interesting'
       icon: 'i-carbon:bookmark'
     - name: 'DstCloudManage'
-      link: 'https://github.com/FuBaooo/dst-cloud-manage'
+      link: 'https://github.com/ProsperBao/dst-cloud-manage'
       desc: 'DST server management tools'
       icon: 'i-carbon-cloud-services'
     - name: 'EpubReading'
-      link: 'https://github.com/FuBaooo/epub-reading'
+      link: 'https://github.com/ProsperBao/epub-reading'
       desc: 'A novel reader with translation function'
       icon: 'i-carbon-book'
 ---

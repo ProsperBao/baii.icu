@@ -7,7 +7,7 @@ levelTitle: Extreme
 
 [[toc]]
 
-[题目来源(type-challenges)](https://github.com/FuBaooo/type-challenges/blob/master/questions/216-extreme-slice/README.md)
+[题目来源(type-challenges)](https://github.com/ProsperBao/type-challenges/blob/master/questions/216-extreme-slice/README.md)
 
 ### 问题
 实现一个 `Array.slice` 的类型版本

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 useHead({
-  title: 'FuBaooo',
+  title: 'ProsperBao',
   meta: [
-    { name: 'description', content: 'FuBaooo\'s personal website' },
+    { name: 'description', content: 'ProsperBao\'s personal website' },
     {
       name: 'theme-color',
       content: computed(() => isDark.value ? '#175e9e' : '#ffffff'),

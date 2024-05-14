@@ -7,7 +7,7 @@ levelTitle: Extreme
 
 [[toc]]
 
-[题目来源(type-challenges)](https://github.com/FuBaooo/type-challenges/blob/master/questions/462-extreme-currying-2/README.zh-CN.md)
+[题目来源(type-challenges)](https://github.com/ProsperBao/type-challenges/blob/master/questions/462-extreme-currying-2/README.zh-CN.md)
 
 ### 问题
 

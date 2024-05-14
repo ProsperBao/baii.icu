@@ -14,7 +14,7 @@ const toggleLocales = () => {
       focusable="false"
     >
       <img class="w-5 h-5 lt-sm:hidden" src="/logo.svg?url" alt="logo">
-      <span text-xl dark:text-gray-200>FuBaooo</span>
+      <span text-xl dark:text-gray-200>ProsperBao</span>
     </router-link>
     <nav dark:text-gray-200 class="nav">
       <div class="spacer" />
@@ -48,7 +48,7 @@ const toggleLocales = () => {
         <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
           <div i-carbon-language />
         </a>
-        <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/FuBaooo" target="_blank" title="GitHub">
+        <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/ProsperBao" target="_blank" title="GitHub">
           <div i-carbon-logo-github />
         </a>
         <a

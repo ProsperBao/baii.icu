@@ -12,7 +12,7 @@ description: 在使用 Netlify 部署时遇到的几个问题
 
 最开始我想法做一个 `profile card` 类似的东西。
 
-![FuBaooo](https://github-readme-stats.vercel.app/api?username=FuBaooo&show_icons=true)
+![ProsperBao](https://github-readme-stats.vercel.app/api?username=ProsperBao&show_icons=true)
 
 就这个东西，很多人的 `profile` 花里胡哨的，所以我想能不能把我最近搞得一个娱乐项目提供一个这个东西。
 

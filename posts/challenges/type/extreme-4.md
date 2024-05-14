@@ -7,7 +7,7 @@ levelTitle: Extreme
 
 [[toc]]
 
-[题目来源(type-challenges)](https://github.com/FuBaooo/type-challenges/blob/master/questions/274-extreme-integers-comparator/README.md)
+[题目来源(type-challenges)](https://github.com/ProsperBao/type-challenges/blob/master/questions/274-extreme-integers-comparator/README.md)
 
 ### 问题
 
