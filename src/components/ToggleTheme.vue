@@ -1,10 +1,9 @@
 <script setup lang='ts'>
-import { toggleDark } from '~/composables/dark'
-const { t } = useI18n()
+import { toggleDark } from '~/logics'
 </script>
 
 <template>
-  <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="() => toggleDark()">
-    <div i="carbon-sun dark:carbon-moon" />
-  </button>
+  <a class="select-none" title="Toggle Color Scheme" @click="toggleDark">
+    <div i-ri-sun-line dark:i-ri-moon-line />
+  </a>
 </template>

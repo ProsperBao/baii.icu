@@ -1,78 +1,77 @@
-<script lang="ts" setup>
-const route = useRoute()
-const { t, availableLocales, locale } = useI18n()
-const toggleLocales = () => {
-  const locales = availableLocales
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+<script setup lang="ts">
+function toTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
 }
+
+const { y: scroll } = useWindowScroll()
 </script>
 
 <template>
   <header class="header z-40">
-    <router-link
-      class="absolute lg:fixed m-4 select-none outline-none flex gap-2 items-center" to="/"
+    <RouterLink
+      class="w-12 h-12 absolute xl:fixed m-5 select-none outline-none flex gap-2 items-center"
+      to="/"
       focusable="false"
     >
       <img class="w-5 h-5 lt-sm:hidden" src="/logo.svg?url" alt="logo">
-      <span text-xl dark:text-gray-200>ProsperBao</span>
-    </router-link>
-    <nav dark:text-gray-200 class="nav">
+      <span text-xl>ProsperBao</span>
+    </RouterLink>
+    <button
+      title="Scroll to top"
+      fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full
+      hover-bg-hex-8883 transition duration-300 z-100 print:hidden
+      :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'"
+      @click="toTop()"
+    >
+      <div i-ri-arrow-up-line />
+    </button>
+    <nav class="nav">
       <div class="spacer" />
-      <div class="right !lt-md:gap-2">
-        <router-link class="icon-btn" to="/blogs" title="Blog" :class="route.path === '/blogs' ? '!opacity-100' : ''">
-          <span class="lt-md:hidden">{{ t('nav.blog') }}</span>
-          <div i-carbon-notebook md:hidden />
-        </router-link>
-        <router-link
-          class="icon-btn" to="/learns" title="Learns"
-          :class="route.path === '/learns' ? '!opacity-100' : ''"
-        >
-          <span class="lt-md:hidden">{{ t('nav.learns') }}</span>
-          <div i-carbon-microscope class="md:hidden" />
-        </router-link>
-        <router-link
-          class="icon-btn" to="/projects" title="Projects"
-          :class="route.path === '/projects' ? '!opacity-100' : ''"
-        >
-          <span class="lt-md:hidden">{{ t('nav.projects') }}</span>
-          <div i-carbon-ai-results-low class="md:hidden" />
-        </router-link>
-        <router-link
-          class="icon-btn" to="/challenges" title="Challenges"
-          :class="route.path === '/challenges' ? '!opacity-100' : ''"
-        >
-          <span class="lt-md:hidden">{{ t('nav.challenges') }}</span>
+      <div class="right" print:op0>
+        <RouterLink to="/posts" title="Blog">
+          <span class="lt-md:hidden">Blog</span>
+          <div i-ri-article-line md:hidden />
+        </RouterLink>
+        <RouterLink to="/projects" title="Projects">
+          <span class="lt-md:hidden">Projects</span>
+          <div i-ri-lightbulb-line class="md:hidden" />
+        </RouterLink>
+        <RouterLink to="/challenges" title="Challenges">
+          <span class="lt-md:hidden">Challenges</span>
           <div i-carbon-chart-venn-diagram class="md:hidden" />
-        </router-link>
+        </RouterLink>
+        <a href="https://github.com/ProsperBao" target="_blank" title="GitHub" class="lt-md:hidden">
+          <div i-uil-github-alt />
+        </a>
         <ToggleTheme />
-        <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
-          <div i-carbon-language />
-        </a>
-        <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/ProsperBao" target="_blank" title="GitHub">
-          <div i-carbon-logo-github />
-        </a>
-        <a
-          class="icon-btn" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener"
-          :title="t('nav.travelling-link')"
-        >
-          <span class="lt-md:hidden">{{ t('nav.travelling') }}</span>
-          <div i-carbon-train class="md:hidden" />
-        </a>
       </div>
     </nav>
   </header>
 </template>
 
 <style scoped>
+.header h1 {
+  margin-bottom: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
 .nav {
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
   display: grid;
   grid-template-columns: auto max-content;
   box-sizing: border-box;
 }
 
-.nav>* {
+.nav > * {
   margin: auto;
 }
 
@@ -100,7 +99,7 @@ const toggleLocales = () => {
   grid-auto-flow: column;
 }
 
-.nav .right>* {
+.nav .right > * {
   margin: auto;
 }
 </style>

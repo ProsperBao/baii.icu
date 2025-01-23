@@ -1,38 +1,54 @@
 import {
+  createLocalFontProcessor,
+} from '@unocss/preset-web-fonts/local'
+import {
   defineConfig,
   presetAttributify,
   presetIcons,
-  presetTypography,
   presetUno,
   presetWebFonts,
   transformerDirectives,
-  transformerVariantGroup,
 } from 'unocss'
 
 export default defineConfig({
   shortcuts: [
-    ['btn', 'px-4 py-1 rounded inline-block bg-lightblue-700 text-white cursor-pointer hover:bg-lightblue-800 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
-    ['icon-btn', 'text-xl inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-lightblue-600'],
+    {
+      'bg-base': 'bg-white dark:bg-black',
+      'color-base': 'text-black dark:text-white',
+      'border-base': 'border-[#8884]',
+    },
+    [/^btn-(\w+)$/, ([_, color]) => `op50 px2.5 py1 transition-all duration-200 ease-out no-underline! hover:(op100 text-${color} bg-${color}/10) border border-base! rounded`],
+  ],
+  rules: [
+    [/^slide-enter-(\d+)$/, ([_, n]) => ({
+      '--enter-stage': n,
+    })],
   ],
   presets: [
-    presetUno(),
-    presetAttributify(),
     presetIcons({
-      scale: 1.2,
-      warn: true,
+      extraProperties: {
+        'display': 'inline-block',
+        'height': '1.2em',
+        'width': '1.2em',
+        'vertical-align': 'text-bottom',
+      },
     }),
-    presetTypography(),
+    presetAttributify(),
+    presetUno(),
     presetWebFonts({
       fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
+        sans: 'Inter',
         mono: 'DM Mono',
+        condensed: 'Roboto Condensed',
+        wisper: 'Bad Script',
       },
+      processors: createLocalFontProcessor(),
     }),
   ],
   transformers: [
     transformerDirectives(),
-    transformerVariantGroup(),
   ],
-  safelist: 'prose prose-sm m-auto text-left'.split(' '),
+  safelist: [
+    'i-ri-menu-2-fill',
+  ],
 })
