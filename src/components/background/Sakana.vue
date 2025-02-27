@@ -1,10 +1,12 @@
 <script lang="ts" setup>
-import Sakana from 'sakana'
+// import Sakana from 'sakana'
 
 const props = defineProps<{ licolico: 'chisato' | 'takina' }>()
 
 onMounted(() => {
-  Sakana.init({
+  // eslint-disable-next-line ts/ban-ts-comment
+  // @ts-expect-error
+  window.Sakana.init({
     el: `#sakana-widget-${props.licolico}`,
     character: props.licolico,
     inertia: 0.01,

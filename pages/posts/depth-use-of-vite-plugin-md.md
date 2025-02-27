@@ -12,14 +12,13 @@ description: vite-plugin-md 在 Markdown 中使用 script setup
 
 在 `vite-plugin-md` 迭代中 `0.13 -> 0.14` 版本，有数个功能使用方法改变或者失效
 
-详情 
+详情
 
-[Failed to use Vue component in markdown](https://github.com/antfu/vite-plugin-md/issues/90) 
+[Failed to use Vue component in markdown](https://github.com/antfu/vite-plugin-md/issues/90)
 
-和 
+和
 
 [Cannot use &lt;script lang= "ts" setup&gt; in markdown](https://github.com/antfu/vite-plugin-md/issues/91)
-
 
 ## 如何查找到错误原因以及如何发现新的使用方法的
 
@@ -61,22 +60,6 @@ description: vite-plugin-md 在 Markdown 中使用 script setup
 
 比如这样：
 
-<template>
-  <div>
-    <button border rd p-x-2 @click="add">++</button> 计数:<span> {{ count }}</span>
-  </div>
-</template>
-
-<script lang="ts" setup>
-import { ref } from 'vue'
-
-const count = ref(0)
-
-const add = () => {
-  count.value++
-}
-</script>
-
 ```typescript
 <template>
   <div>
@@ -98,23 +81,6 @@ const add = () => {
 
 还可以这样
 
-
-<template>
-  <div>
-    <button border rd p-x-2 @click="toggleLocales">切换语言</button> {{ t('button.about') }}
-  </div>
-</template>
-
-<script lang="ts" setup>
-import { useI18n } from 'vue-i18n'
-
-const { t, availableLocales, locale } = useI18n()
-const toggleLocales = () => {
-  const locales = availableLocales
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
-}
-</script>
-
 ```typescript
 <template>
   <div>
@@ -132,7 +98,6 @@ const toggleLocales = () => {
 }
 </script>
 ```
-
 
 ## 遗憾
 
