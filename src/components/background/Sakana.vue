@@ -6,7 +6,7 @@ const props = defineProps<{ licolico: 'chisato' | 'takina' }>()
 onMounted(() => {
   // eslint-disable-next-line ts/ban-ts-comment
   // @ts-expect-error
-  window.Sakana.init({
+  new SakanaWidget().init({
     el: `#sakana-widget-${props.licolico}`,
     character: props.licolico,
     inertia: 0.01,
