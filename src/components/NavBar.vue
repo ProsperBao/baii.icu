@@ -46,6 +46,12 @@ const { y: scroll } = useWindowScroll()
         <a href="https://github.com/ProsperBao" target="_blank" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />
         </a>
+        <a
+          class="icon-btn" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener"
+          title="Travelling"
+        >
+          <div i-carbon-train />
+        </a>
         <ToggleTheme />
       </div>
     </nav>
