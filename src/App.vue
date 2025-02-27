@@ -37,10 +37,8 @@ onKeyStroke('Escape', (e) => {
 
 <template>
   <NavBar />
-  <div class="fixed bottom--10px flex justify-between w-[calc(100%+10px)] left--10px z-9999 translate-0">
-    <Sakana licolico="chisato" />
-    <Sakana licolico="takina" />
-  </div>
+  <Sakana licolico="chisato" />
+  <Sakana licolico="takina" />
   <main class="px-7 py-10 of-x-hidden">
     <RouterView />
     <Footer :key="route.path" />
