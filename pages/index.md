@@ -16,7 +16,7 @@ title: ProsperBao
 
 ---
 
-你可以在 [Github](https://github.com/ProsperBao) 找到我。<br/>
+你可以在 [GitHub](https://github.com/ProsperBao) 找到我。<br/>
 邮箱在这里 [baihe2233@gmail.com](mailto:baihe2233@gmail.com).<br />
 
 灵感来自于 [@antfu](https://antfu.me/)，感谢大佬的博客。<br />
